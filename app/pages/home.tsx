@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -20,6 +20,12 @@ const staggerContainer = {
 };
 
 export default function Home() {
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+
+  const handleFaqClick = (index: number) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-800">
       {/* Hero Section */}
@@ -275,6 +281,75 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 relative">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+          >
+            Frequently Asked Questions
+          </motion.h2>
+          <motion.div 
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="max-w-4xl mx-auto grid gap-4"
+          >
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                variants={{
+                  initial: { opacity: 0, y: 20 },
+                  animate: { opacity: 1, y: 0, transition: { delay: index * 0.1 } }
+                }}
+                className="group relative"
+                onClick={() => handleFaqClick(index)}
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                <div className="relative bg-gray-900 rounded-xl p-6 hover:transform hover:scale-[1.01] transition duration-300 cursor-pointer">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-semibold text-purple-200 pr-8">{faq.question}</h3>
+                    <div className={`transform transition-transform duration-300 ${openFaqIndex === index ? 'rotate-180' : ''}`}>
+                      <svg 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        width="24" 
+                        height="24" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor" 
+                        className="text-purple-400"
+                      >
+                        <path 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          strokeWidth={2} 
+                          d="M19 9l-7 7-7-7" 
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <motion.div
+                    initial={false}
+                    animate={{ 
+                      height: openFaqIndex === index ? 'auto' : 0,
+                      opacity: openFaqIndex === index ? 1 : 0
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <p className="text-purple-100/70 mt-4">{faq.answer}</p>
+                  </motion.div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
     </main>
   );
 }
@@ -327,4 +402,31 @@ const features = [
     title: "Emergency Dial",
     description: "We care about our users and sprin7ers. Any suspicious activities or not feeling safe, click our emergency dial"
   }
-] 
+]
+
+const faqs = [
+  {
+    question: "How does Sprin7 ensure delivery safety?",
+    answer: "We implement a rigorous verification system for all Sprin7ers, real-time tracking, and an emergency dial feature. Each delivery is insured, and our platform maintains transparent communication between users and Sprin7ers throughout the delivery process."
+  },
+  {
+    question: "What are the requirements to become a Sprin7er?",
+    answer: "To become a Sprin7er, you must be 18+ years old, pass our background check, have a valid ID, provide proof of right to work in the UK, and complete our safety training program. For vehicle deliveries, you'll need appropriate licenses and insurance."
+  },
+  {
+    question: "How are delivery prices calculated?",
+    answer: "Prices are calculated based on distance, delivery method (walking, cycling, or vehicle), package size, and delivery urgency. We offer transparent pricing with no hidden fees, and you can see the exact cost before confirming your delivery."
+  },
+  {
+    question: "What types of items can I send through Sprin7?",
+    answer: "You can send most legal items that can be safely transported by our Sprin7ers. This includes documents, packages, food, and small to medium-sized items. Dangerous goods, illegal items, and oversized packages are not permitted."
+  },
+  {
+    question: "How does Sprin7 contribute to sustainability?",
+    answer: "We prioritize eco-friendly delivery methods like walking and cycling, use electric vehicles when motorized transport is necessary, and track carbon savings for each delivery. Our marketplace also promotes local, sustainable businesses."
+  },
+  {
+    question: "What happens if my package is damaged or lost?",
+    answer: "All deliveries through Sprin7 are insured. If your package is damaged or lost, report it immediately through the app. Our support team will investigate and process your claim within 24-48 hours."
+  }
+]; 
