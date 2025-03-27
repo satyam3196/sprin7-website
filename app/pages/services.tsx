@@ -90,7 +90,7 @@ export default function Services() {
           >
             <motion.h1
               variants={fadeInUp}
-              className="text-5xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+              className="text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
             >
               Delivery Options
             </motion.h1>

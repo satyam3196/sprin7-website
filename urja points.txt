@@ -1,0 +1,18 @@
+6th block to home page 
+
+cool way - white background color of text  - 143 to 161 - either black or white container
+
+features - either scrollable or put images/icons for each feature and square blocks
+
+remove the containers for download ios/or dim down opacity of container to 10% black
+
+
+white background for our story - about page
+
+application process - 3 and 2 columns
+
+industries we serve - icons 
+
+walking cycling page - similar icons
+
+images for goals for 2027 

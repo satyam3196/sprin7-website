@@ -149,13 +149,15 @@ export default function Home() {
           viewport={{ once: true }}
           className="container mx-auto px-4 relative"
         >
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
-              'Cool' Way to Get your Stuff and Save the Earth
-            </h2>
-            <p className="text-xl text-purple-100/80 leading-relaxed text-justify">
-              At Sprin7, both as a user and Sprin7er, we're together committed to revolutionising urban logistics through swift, safe, and sustainable practices. Our system will ensure the delivery process meets the zero or low-emission transportation methods, reduce the carbon footprint. Just use and enjoy our delivery service, you will experience how 'easy peasy lemon squeezy' to manifest cleaner, greener, and safer communities.
-            </p>
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-gray-900 rounded-2xl p-8 shadow-xl">
+              <h2 className="text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
+                'Cool' Way to Get your Stuff and Save the Earth
+              </h2>
+              <p className="text-xl text-purple-100/80 leading-relaxed text-justify">
+                At Sprin7, both as a user and Sprin7er, we're together committed to revolutionising urban logistics through swift, safe, and sustainable practices. Our system will ensure the delivery process meets the zero or low-emission transportation methods, reduce the carbon footprint. Just use and enjoy our delivery service, you will experience how 'easy peasy lemon squeezy' to manifest cleaner, greener, and safer communities.
+              </p>
+            </div>
           </div>
         </motion.div>
       </section>
@@ -185,10 +187,13 @@ export default function Home() {
                   initial: { opacity: 0, scale: 0.9 },
                   animate: { opacity: 1, scale: 1, transition: { delay: index * 0.1 } }
                 }}
-                className="group relative"
+                className="group relative aspect-square"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                <div className="relative bg-gray-900 rounded-xl p-6 h-full hover:transform hover:scale-[1.02] transition duration-300">
+                <div className="relative bg-gray-900 rounded-xl p-6 h-full hover:transform hover:scale-[1.02] transition duration-300 flex flex-col items-center justify-center text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                    {feature.icon}
+                  </div>
                   <h3 className="text-xl font-semibold mb-3 text-purple-200">{feature.title}</h3>
                   <p className="text-purple-100/70">{feature.description}</p>
                 </div>
@@ -208,7 +213,7 @@ export default function Home() {
           className="container mx-auto px-4 text-center relative"
         >
           <h2 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
-            Experience Sprin7 today
+            Experience Sprin7 today!
           </h2>
           <p className="text-xl mb-12 text-purple-200">
             Download our app and join London's sustainable delivery revolution.
@@ -220,10 +225,10 @@ export default function Home() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="group relative"
+              className="group relative w-full max-w-sm"
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-              <div className="relative bg-gray-900 rounded-2xl p-8 w-full max-w-sm">
+              <div className="relative bg-gray-900 rounded-2xl p-8 h-full">
                 <div className="flex items-center justify-center mb-6">
                   <Image
                     src="/apple-14-white.png"
@@ -233,8 +238,6 @@ export default function Home() {
                     className="relative"
                   />
                 </div>
-                <h3 className="text-2xl font-semibold text-purple-200 mb-2">Download on App Store</h3>
-                <p className="text-purple-100/70 mb-6">Get the Sprin7 app on iPhone today!</p>
                 <Link 
                   href="#" 
                   className="relative inline-flex group w-full justify-center"
@@ -252,10 +255,10 @@ export default function Home() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="group relative"
+              className="group relative w-full max-w-sm"
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-              <div className="relative bg-gray-900 rounded-2xl p-8 w-full max-w-sm">
+              <div className="relative bg-gray-900 rounded-2xl p-8 h-full">
                 <div className="flex items-center justify-center mb-6">
                   <Image
                     src="/android-official.svg"
@@ -265,8 +268,6 @@ export default function Home() {
                     className="relative"
                   />
                 </div>
-                <h3 className="text-2xl font-semibold text-purple-200 mb-2">Get it on Google Play</h3>
-                <p className="text-purple-100/70 mb-6">Get the Sprin7 app on Android today!</p>
                 <Link 
                   href="#" 
                   className="relative inline-flex group w-full justify-center"
@@ -367,10 +368,14 @@ const steps = [
     title: "Pick Your Delivery Option",
     description: "Opt for walk, cycle, electric bike, or eco-friendly vehicle"
   },
-  {
-    title: "Track in Real-Time",
-    description: "Follow your delivery's journey from pickup point to destination"
-  },
+        {
+          title: "Track in Real-Time",
+          description: "Follow your delivery's journey from pickup point to destination"
+        }, 
+        {
+          title: "Get Instant Proof of Delivery",
+          description: "Receive immediate confirmation and digital receipt of your completed delivery"
+        },
   {
     title: "Share your Feedback",
     description: "Give us your honest feedback on how you find the Sprin7er who delivers your items"
@@ -380,27 +385,57 @@ const steps = [
 const features = [
   {
     title: "Eco-Friendly Options",
-    description: "Choose from walking, cycling, electric bikes, or hybrid/electric vehicles"
+    description: "Choose from walking, cycling, electric bikes, or hybrid/electric vehicles",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    )
   },
   {
     title: "Sustainable Marketplace",
-    description: "Shop and get your preferred eco-conscious retailers in a blink of an eye"
+    description: "Shop and get your preferred eco-conscious retailers in a blink of an eye",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    )
   },
   {
     title: "Carbon Footprint Tracker",
-    description: "Brag about how big environmental impact you have made from your delivery choices!"
+    description: "Brag about how big environmental impact you have made from your delivery choices!",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+    )
   },
   {
     title: "IRL Sprin7ers",
-    description: "Say No More to Catfish Couriers! Enough of receiving deliveries from different faces"
+    description: "Say No More to Catfish Couriers! Enough of receiving deliveries from different faces",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+    )
   },
   {
     title: "Real-Time Updates",
-    description: "Follow your package every step of the way"
+    description: "Follow your package every step of the way",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    )
   },
   {
     title: "Emergency Dial",
-    description: "We care about our users and sprin7ers. Any suspicious activities or not feeling safe, click our emergency dial"
+    description: "We care about our users and sprin7ers. Any suspicious activities or not feeling safe, click our emergency dial",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      </svg>
+    )
   }
 ]
 

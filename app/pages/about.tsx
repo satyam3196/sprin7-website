@@ -47,7 +47,7 @@ export default function About() {
           >
             <motion.h1
               variants={fadeInUp}
-              className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300 mb-8"
+              className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300 mb-8"
             >
               Our Story
             </motion.h1>
@@ -70,14 +70,14 @@ export default function About() {
       {/* Our Values Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
-          <motion.h2
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
           >
             Our Values
-          </motion.h2>
+          </motion.h1>
           <motion.div
             initial="initial"
             whileInView="animate"
@@ -115,9 +115,9 @@ export default function About() {
           className="container mx-auto px-4 relative"
         >
           <div className="max-w-3xl mx-auto text-center space-y-8">
-            <h2 className="text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
+            <h1 className="text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
               Our Vision
-            </h2>
+            </h1>
             <p className="text-xl text-purple-100/80 leading-relaxed text-justify">
               We envision a future where urban deliveries contribute to help our communities to achieve their own net-zero target. Starting in London and expanding across the UK, Sprin7 aims to be the pioneer in making the UK achieve their net-zero target and be safe again!
             </p>
