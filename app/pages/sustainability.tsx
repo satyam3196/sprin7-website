@@ -34,10 +34,14 @@ const initiatives = [
     title: "Eco-conscious partnerships",
     description: "We partner with retailers who share our environmental values."
   },
-  {
-    title: "Community clean-up events",
-    description: "Regular events to keep our communities clean and green."
-  }
+    {
+      title: "Community clean-up events",
+      description: "Regular events to keep our communities clean and green."
+    }, 
+    {
+      title: "Green Marketplace",
+      description: "We connect eco-conscious SMEs with our users who value sustainable products."
+    }
 ];
 
 const goals = [

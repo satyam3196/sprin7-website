@@ -3,6 +3,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { 
+  FaUser, 
+  FaTruck, 
+  FaBolt, 
+  FaBicycle 
+} from "react-icons/fa";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -33,22 +39,22 @@ const transportMethods = [
   {
     title: "Walking",
     description: "For short distances in congested areas, our walking Sprin7ers navigate pedestrian routes for the ultimate zero-emission delivery.",
-    icon: "/walking-icon.svg"
+    icon: FaUser
   },
   {
     title: "Cycling",
     description: "Our cycling Sprin7ers carry small to medium packages quickly through urban areas, bypassing traffic while producing zero emissions.",
-    icon: "/cycling-icon.svg"
+    icon: FaBicycle
   },
   {
     title: "Electric Bikes",
     description: "For slightly larger items or longer distances, electric bikes offer speed and sustainability without exhausting our Sprin7ers.",
-    icon: "/ebike-icon.svg"
+    icon: FaBolt
   },
   {
     title: "Electric/Hybrid Vehicles",
     description: "When packages are larger or distances greater, our eco-friendly vehicles ensure your delivery remains as sustainable as possible.",
-    icon: "/ev-icon.svg"
+    icon: FaTruck
   }
 ];
 
@@ -135,7 +141,7 @@ export default function Services() {
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 gap-8"
+            className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
           >
             {transportMethods.map((method, index) => (
               <motion.div
@@ -144,12 +150,13 @@ export default function Services() {
                   initial: { opacity: 0, y: 20 },
                   animate: { opacity: 1, y: 0, transition: { delay: index * 0.1 } }
                 }}
-                className="group relative"
+                className="group relative aspect-square"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                <div className="relative bg-gray-900 rounded-xl p-8 h-full hover:transform hover:scale-[1.02] transition duration-300">
-                  <h3 className="text-2xl font-semibold mb-4 text-purple-200">{method.title}</h3>
-                  <p className="text-purple-100/70">{method.description}</p>
+                <div className="relative bg-gray-900 rounded-xl p-4 h-full hover:transform hover:scale-[1.02] transition duration-300 flex flex-col items-center justify-center text-center">
+                  <method.icon className="w-12 h-12 text-purple-400 mb-3" />
+                  <h3 className="text-lg font-semibold mb-2 text-purple-200">{method.title}</h3>
+                  <p className="text-sm text-purple-100/70">{method.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -186,7 +193,7 @@ export default function Services() {
               variants={staggerContainer}
             >
               <h3 className="text-3xl font-semibold text-center text-purple-200 mb-12">Our Partners</h3>
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-5 gap-4">
                 {partners.map((partner, index) => (
                   <motion.div
                     key={index}
@@ -197,9 +204,9 @@ export default function Services() {
                     className="group relative"
                   >
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                    <div className="relative bg-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-[1.02] transition duration-300">
-                      <h4 className="text-xl font-semibold mb-2 text-purple-200">{partner.name}</h4>
-                      <p className="text-purple-100/70">{partner.description}</p>
+                    <div className="relative bg-gray-900 rounded-xl p-4 text-center hover:transform hover:scale-[1.02] transition duration-300">
+                      <h4 className="text-lg font-semibold mb-2 text-purple-200">{partner.name}</h4>
+                      <p className="text-sm text-purple-100/70">{partner.description}</p>
                     </div>
                   </motion.div>
                 ))}

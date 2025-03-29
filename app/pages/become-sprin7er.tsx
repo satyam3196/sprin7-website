@@ -32,7 +32,7 @@ const benefits = [
   "Competitive compensation rates",
   "Be part of an eco-conscious community",
   "Reduced carbon footprint",
-  "Exercise while you earn (for walking/cycling Sprin7ers)",
+  "Exercise while you earn ",
   "Contribute to cleaner air in London"
 ];
 
