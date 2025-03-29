@@ -15,6 +15,11 @@ const nextConfig = {
   },
   // This is important to handle GitHub Pages routing
   trailingSlash: true,
+  reactStrictMode: true,
+  // This is important for GitHub Pages deployment
+  env: {
+    NEXT_PUBLIC_BASE_PATH: '/sprin7-website',
+  },
 }
 
 module.exports = nextConfig 

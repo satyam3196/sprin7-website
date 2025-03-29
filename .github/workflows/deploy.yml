@@ -24,10 +24,16 @@ jobs:
           cache: 'npm'
           
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          npm cache clean --force
         
       - name: Build with Next.js
-        run: npm run build
+        run: |
+          npm run build
+          touch out/.nojekyll
+        env:
+          NEXT_PUBLIC_BASE_PATH: /sprin7-website
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
