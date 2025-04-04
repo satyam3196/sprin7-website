@@ -1,6 +1,13 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 bg-gradient-to-r from-gray-900 via-purple-900/95 to-violet-900/95 backdrop-blur-sm z-50">
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
@@ -38,8 +45,9 @@ const Navbar = () => {
         <div className="md:hidden relative">
           <button
             type="button"
+            onClick={toggleMobileMenu}
             className="text-purple-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500"
-            aria-expanded="false"
+            aria-expanded={isMobileMenuOpen}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -61,7 +69,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu, show/hide based on menu state */}
-      <div className="md:hidden hidden">
+      <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 bg-gradient-to-b from-gray-900 to-purple-900/95 relative">
           <Link href="/about" className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
             About
@@ -69,7 +77,7 @@ const Navbar = () => {
           <Link href="/services" className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
             Services
           </Link>
-          <Link href="/become-sprinter" className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
+          <Link href="/become-sprin7er" className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
             Become a Sprin7er
           </Link>
           <Link href="/business" className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Script from 'next/script';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -27,331 +28,347 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-800">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-        <div className="container mx-auto px-4 py-24 relative">
-          <motion.div 
-            initial="initial"
-            animate="animate"
-            variants={staggerContainer}
-            className="flex flex-col md:flex-row items-center justify-between gap-12"
-          >
-            <div className="md:w-1/2 space-y-8">
-              <motion.h1 
-                variants={fadeInUp}
-                className="text-5xl md:text-7xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
-              >
-                Wanna get something? Just Sprin7 it!
-              </motion.h1>
-              <motion.h2 
-                variants={fadeInUp}
-                className="text-xl md:text-2xl text-purple-200"
-              >
-                Swift Safe Sustainable Delivery Service
-              </motion.h2>
-              <motion.p 
-                variants={fadeInUp}
-                className="text-lg text-purple-100/80"
-              >
-                Sprin7 is a game-changer delivery service with eco-conscious and secured verification system
-              </motion.p>
+    <>
+      {/* Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-CY5S612NZT"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CY5S612NZT');
+        `}
+      </Script>
+      
+      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-800">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+          <div className="container mx-auto px-4 py-24 relative">
+            <motion.div 
+              initial="initial"
+              animate="animate"
+              variants={staggerContainer}
+              className="flex flex-col md:flex-row items-center justify-between gap-12"
+            >
+              <div className="md:w-1/2 space-y-8">
+                <motion.h1 
+                  variants={fadeInUp}
+                  className="text-5xl md:text-7xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+                >
+                  Wanna get something? Just Sprin7 it!
+                </motion.h1>
+                <motion.h2 
+                  variants={fadeInUp}
+                  className="text-xl md:text-2xl text-purple-200"
+                >
+                  Swift Safe Sustainable Delivery Service
+                </motion.h2>
+                <motion.p 
+                  variants={fadeInUp}
+                  className="text-lg text-purple-100/80"
+                >
+                  Sprin7 is a game-changer delivery service with eco-conscious and secured verification system
+                </motion.p>
+                <motion.div 
+                  variants={fadeInUp}
+                  className="flex flex-wrap gap-4"
+                >
+                  <Link href="#download" className="relative inline-flex group">
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full blur opacity-50 group-hover:opacity-100 transition"></div>
+                    <button className="relative px-8 py-3 bg-black rounded-full text-white font-semibold hover:bg-gray-900 transition">
+                      Download App
+                    </button>
+                  </Link>
+                  <Link href="/become-sprin7er" className="relative inline-flex group">
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur opacity-50 group-hover:opacity-100 transition"></div>
+                    <button className="relative px-8 py-3 bg-purple-900 rounded-full text-white font-semibold hover:bg-purple-800 transition">
+                      Become a Sprin7er
+                    </button>
+                  </Link>
+                  <Link href="#features" className="px-8 py-3 border-2 border-purple-400 text-purple-200 rounded-full font-semibold hover:bg-purple-400/10 transition">
+                    Learn More
+                  </Link>
+                </motion.div>
+              </div>
               <motion.div 
-                variants={fadeInUp}
-                className="flex flex-wrap gap-4"
+                className="md:w-1/2 relative"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <Link href="#download" className="relative inline-flex group">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full blur opacity-50 group-hover:opacity-100 transition"></div>
-                  <button className="relative px-8 py-3 bg-black rounded-full text-white font-semibold hover:bg-gray-900 transition">
-                    Download App
-                  </button>
-                </Link>
-                <Link href="/become-sprin7er" className="relative inline-flex group">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur opacity-50 group-hover:opacity-100 transition"></div>
-                  <button className="relative px-8 py-3 bg-purple-900 rounded-full text-white font-semibold hover:bg-purple-800 transition">
-                    Become a Sprin7er
-                  </button>
-                </Link>
-                <Link href="#features" className="px-8 py-3 border-2 border-purple-400 text-purple-200 rounded-full font-semibold hover:bg-purple-400/10 transition">
-                  Learn More
-                </Link>
-              </motion.div>
-            </div>
-            <motion.div 
-              className="md:w-1/2 relative"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <div className="relative w-full aspect-[3/4] max-w-[400px] mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl blur-2xl opacity-30"></div>
-                <Image
-                  src="/phone-mockup.jpg"
-                  alt="Sprin7 App"
-                  fill
-                  className="object-contain relative z-10"
-                  priority
-                />
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
-          >
-            Just Sprin7 it!
-          </motion.h2>
-          <motion.div 
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {steps.map((step, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  initial: { opacity: 0, y: 20 },
-                  animate: { opacity: 1, y: 0, transition: { delay: index * 0.1 } }
-                }}
-                className="group relative"
-              >
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                <div className="relative bg-gray-900 rounded-xl p-6 hover:transform hover:scale-[1.02] transition duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4 text-xl font-bold text-white">
-                    {index + 1}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 text-purple-200">{step.title}</h3>
-                  <p className="text-purple-100/70">{step.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Cool Way Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/50 to-gray-900/50"></div>
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="container mx-auto px-4 relative"
-        >
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-gray-900 rounded-2xl p-8 shadow-xl">
-              <h2 className="text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
-                'Cool' Way to Get your Stuff and Save the Earth
-              </h2>
-              <p className="text-xl text-purple-100/80 leading-relaxed text-justify">
-                At Sprin7, both as a user and Sprin7er, we're together committed to revolutionising urban logistics through swift, safe, and sustainable practices. Our system will ensure the delivery process meets the zero or low-emission transportation methods, reduce the carbon footprint. Just use and enjoy our delivery service, you will experience how 'easy peasy lemon squeezy' to manifest cleaner, greener, and safer communities.
-              </p>
-            </div>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Features Section */}
-      <section id="features" className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
-          >
-            Features
-          </motion.h2>
-          <motion.div 
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  initial: { opacity: 0, scale: 0.9 },
-                  animate: { opacity: 1, scale: 1, transition: { delay: index * 0.1 } }
-                }}
-                className="group relative aspect-square"
-              >
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                <div className="relative bg-gray-900 rounded-xl p-6 h-full hover:transform hover:scale-[1.02] transition duration-300 flex flex-col items-center justify-center text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-purple-200">{feature.title}</h3>
-                  <p className="text-purple-100/70">{feature.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Download Section */}
-      <section id="download" className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-900/50 to-gray-900/50"></div>
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="container mx-auto px-4 text-center relative"
-        >
-          <h2 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
-            Experience Sprin7 today!
-          </h2>
-          <p className="text-xl mb-12 text-purple-200">
-            Download our app and join London's sustainable delivery revolution.
-          </p>
-          
-          <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-            {/* iOS Download */}
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="group relative w-full max-w-sm"
-            >
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-              <div className="relative bg-gray-900 rounded-2xl p-8 h-full">
-                <div className="flex items-center justify-center mb-6">
+                <div className="relative w-full aspect-[3/4] max-w-[400px] mx-auto">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl blur-2xl opacity-30"></div>
                   <Image
-                    src="/sprin7-website/apple-14-white.png"
-                    alt="iOS App"
-                    width={60}
-                    height={60}
-                    className="relative"
+                    src="/phone-mockup.jpg"
+                    alt="Sprin7 App"
+                    fill
+                    className="object-contain relative z-10"
+                    priority
                   />
                 </div>
-                <Link 
-                  href="#" 
-                  className="relative inline-flex group w-full justify-center"
-                >
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur opacity-50 group-hover:opacity-100 transition"></div>
-                  <span className="relative px-8 py-3 bg-black rounded-full text-white font-semibold w-full hover:bg-gray-900 transition">
-                    Download for iOS
-                  </span>
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Android Download */}
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="group relative w-full max-w-sm"
-            >
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-              <div className="relative bg-gray-900 rounded-2xl p-8 h-full">
-                <div className="flex items-center justify-center mb-6">
-                  <Image
-                    src="/sprin7-website/android-official.svg"
-                    alt="Android App"
-                    width={60}
-                    height={60}
-                    className="relative"
-                  />
-                </div>
-                <Link 
-                  href="#" 
-                  className="relative inline-flex group w-full justify-center"
-                >
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur opacity-50 group-hover:opacity-100 transition"></div>
-                  <span className="relative px-8 py-3 bg-black rounded-full text-white font-semibold w-full hover:bg-gray-900 transition">
-                    Download for Android
-                  </span>
-                </Link>
-              </div>
+              </motion.div>
             </motion.div>
           </div>
-        </motion.div>
-      </section>
+        </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
-          >
-            Frequently Asked Questions
-          </motion.h2>
-          <motion.div 
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="max-w-4xl mx-auto grid gap-4"
-          >
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                variants={{
-                  initial: { opacity: 0, y: 20 },
-                  animate: { opacity: 1, y: 0, transition: { delay: index * 0.1 } }
-                }}
-                className="group relative"
-                onClick={() => handleFaqClick(index)}
-              >
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                <div className="relative bg-gray-900 rounded-xl p-6 hover:transform hover:scale-[1.01] transition duration-300 cursor-pointer">
-                  <div className="flex justify-between items-center">
-                    <h3 className="text-xl font-semibold text-purple-200 pr-8">{faq.question}</h3>
-                    <div className={`transform transition-transform duration-300 ${openFaqIndex === index ? 'rotate-180' : ''}`}>
-                      <svg 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        width="24" 
-                        height="24" 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
-                        stroke="currentColor" 
-                        className="text-purple-400"
-                      >
-                        <path 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round" 
-                          strokeWidth={2} 
-                          d="M19 9l-7 7-7-7" 
-                        />
-                      </svg>
+        {/* How It Works Section */}
+        <section className="py-20 relative">
+          <div className="container mx-auto px-4">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+            >
+              Just Sprin7 it!
+            </motion.h2>
+            <motion.div 
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              {steps.map((step, index) => (
+                <motion.div
+                  key={index}
+                  variants={{
+                    initial: { opacity: 0, y: 20 },
+                    animate: { opacity: 1, y: 0, transition: { delay: index * 0.1 } }
+                  }}
+                  className="group relative"
+                >
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                  <div className="relative bg-gray-900 rounded-xl p-6 hover:transform hover:scale-[1.02] transition duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4 text-xl font-bold text-white">
+                      {index + 1}
                     </div>
+                    <h3 className="text-xl font-semibold mb-2 text-purple-200">{step.title}</h3>
+                    <p className="text-purple-100/70">{step.description}</p>
                   </div>
-                  <motion.div
-                    initial={false}
-                    animate={{ 
-                      height: openFaqIndex === index ? 'auto' : 0,
-                      opacity: openFaqIndex === index ? 1 : 0
-                    }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Cool Way Section */}
+        <section className="py-20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-purple-900/50 to-gray-900/50"></div>
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="container mx-auto px-4 relative"
+          >
+            <div className="max-w-3xl mx-auto">
+              <div className="bg-gray-900 rounded-2xl p-8 shadow-xl">
+                <h2 className="text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
+                  'Cool' Way to Get your Stuff and Save the Earth
+                </h2>
+                <p className="text-xl text-purple-100/80 leading-relaxed text-justify">
+                  At Sprin7, both as a user and Sprin7er, we're together committed to revolutionising urban logistics through swift, safe, and sustainable practices. Our system will ensure the delivery process meets the zero or low-emission transportation methods, reduce the carbon footprint. Just use and enjoy our delivery service, you will experience how 'easy peasy lemon squeezy' to manifest cleaner, greener, and safer communities.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Features Section */}
+        <section id="features" className="py-20 relative">
+          <div className="container mx-auto px-4">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+            >
+              Features
+            </motion.h2>
+            <motion.div 
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  variants={{
+                    initial: { opacity: 0, scale: 0.9 },
+                    animate: { opacity: 1, scale: 1, transition: { delay: index * 0.1 } }
+                  }}
+                  className="group relative aspect-square"
+                >
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                  <div className="relative bg-gray-900 rounded-xl p-6 h-full hover:transform hover:scale-[1.02] transition duration-300 flex flex-col items-center justify-center text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-purple-200">{feature.title}</h3>
+                    <p className="text-purple-100/70">{feature.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Download Section */}
+        <section id="download" className="py-20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-purple-900/50 to-gray-900/50"></div>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="container mx-auto px-4 text-center relative"
+          >
+            <h2 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
+              Experience Sprin7 today!
+            </h2>
+            <p className="text-xl mb-12 text-purple-200">
+              Download our app and join London's sustainable delivery revolution.
+            </p>
+            
+            <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+              {/* iOS Download */}
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="group relative w-full max-w-sm"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                <div className="relative bg-gray-900 rounded-2xl p-8 h-full">
+                  <div className="flex items-center justify-center mb-6">
+                    <Image
+                      src="/sprin7-website/apple-14-white.png"
+                      alt="iOS App"
+                      width={60}
+                      height={60}
+                      className="relative"
+                    />
+                  </div>
+                  <Link 
+                    href="#" 
+                    className="relative inline-flex group w-full justify-center"
                   >
-                    <p className="text-purple-100/70 mt-4">{faq.answer}</p>
-                  </motion.div>
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur opacity-50 group-hover:opacity-100 transition"></div>
+                    <span className="relative px-8 py-3 bg-black rounded-full text-white font-semibold w-full hover:bg-gray-900 transition">
+                      Download for iOS
+                    </span>
+                  </Link>
                 </div>
               </motion.div>
-            ))}
+
+              {/* Android Download */}
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="group relative w-full max-w-sm"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                <div className="relative bg-gray-900 rounded-2xl p-8 h-full">
+                  <div className="flex items-center justify-center mb-6">
+                    <Image
+                      src="/sprin7-website/android-official.svg"
+                      alt="Android App"
+                      width={60}
+                      height={60}
+                      className="relative"
+                    />
+                  </div>
+                  <Link 
+                    href="#" 
+                    className="relative inline-flex group w-full justify-center"
+                  >
+                    <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur opacity-50 group-hover:opacity-100 transition"></div>
+                    <span className="relative px-8 py-3 bg-black rounded-full text-white font-semibold w-full hover:bg-gray-900 transition">
+                      Download for Android
+                    </span>
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
-        </div>
-      </section>
-    </main>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 relative">
+          <div className="container mx-auto px-4">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+            >
+              Frequently Asked Questions
+            </motion.h2>
+            <motion.div 
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+              className="max-w-4xl mx-auto grid gap-4"
+            >
+              {faqs.map((faq, index) => (
+                <motion.div
+                  key={index}
+                  variants={{
+                    initial: { opacity: 0, y: 20 },
+                    animate: { opacity: 1, y: 0, transition: { delay: index * 0.1 } }
+                  }}
+                  className="group relative"
+                  onClick={() => handleFaqClick(index)}
+                >
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+                  <div className="relative bg-gray-900 rounded-xl p-6 hover:transform hover:scale-[1.01] transition duration-300 cursor-pointer">
+                    <div className="flex justify-between items-center">
+                      <h3 className="text-xl font-semibold text-purple-200 pr-8">{faq.question}</h3>
+                      <div className={`transform transition-transform duration-300 ${openFaqIndex === index ? 'rotate-180' : ''}`}>
+                        <svg 
+                          xmlns="http://www.w3.org/2000/svg" 
+                          width="24" 
+                          height="24" 
+                          fill="none" 
+                          viewBox="0 0 24 24" 
+                          stroke="currentColor" 
+                          className="text-purple-400"
+                        >
+                          <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            strokeWidth={2} 
+                            d="M19 9l-7 7-7-7" 
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <motion.div
+                      initial={false}
+                      animate={{ 
+                        height: openFaqIndex === index ? 'auto' : 0,
+                        opacity: openFaqIndex === index ? 1 : 0
+                      }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden"
+                    >
+                      <p className="text-purple-100/70 mt-4">{faq.answer}</p>
+                    </motion.div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
 
