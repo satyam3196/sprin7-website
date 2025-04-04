@@ -30,7 +30,7 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-800">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/sprin7-website/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
         <div className="container mx-auto px-4 py-24 relative">
           <motion.div 
             initial="initial"
@@ -87,7 +87,7 @@ export default function Home() {
               <div className="relative w-full aspect-[3/4] max-w-[400px] mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl blur-2xl opacity-30"></div>
                 <Image
-                  src="/sprin7-website/phone-mockup.jpg"
+                  src="/phone-mockup.jpg"
                   alt="Sprin7 App"
                   fill
                   className="object-contain relative z-10"

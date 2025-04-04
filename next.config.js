@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',  // Required for static site generation
-  basePath: '/sprin7-website', // Your repository name
-  assetPrefix: '/sprin7-website/', // Required for loading assets from public folder
+  // basePath: '/sprin7-website', // Removed for custom domain
+  // assetPrefix: '/sprin7-website/', // Removed for custom domain
   images: {
     unoptimized: true, // Required for static export
     domains: ['localhost'],
@@ -16,9 +16,9 @@ const nextConfig = {
   // This is important to handle GitHub Pages routing
   trailingSlash: true,
   reactStrictMode: true,
-  // This is important for GitHub Pages deployment
+  // Updated for custom domain
   env: {
-    NEXT_PUBLIC_BASE_PATH: '/sprin7-website',
+    NEXT_PUBLIC_BASE_PATH: '',
   },
 }
 
