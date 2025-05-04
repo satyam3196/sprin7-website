@@ -8,6 +8,10 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 bg-gradient-to-r from-gray-900 via-purple-900/95 to-violet-900/95 backdrop-blur-sm z-50">
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
@@ -71,22 +75,22 @@ const Navbar = () => {
       {/* Mobile menu, show/hide based on menu state */}
       <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 bg-gradient-to-b from-gray-900 to-purple-900/95 relative">
-          <Link href="/about" className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
+          <Link href="/about" onClick={closeMenu} className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
             About
           </Link>
-          <Link href="/services" className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
+          <Link href="/services" onClick={closeMenu} className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
             Services
           </Link>
-          <Link href="/become-sprin7er" className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
+          <Link href="/become-sprin7er" onClick={closeMenu} className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
             Become a Sprin7er
           </Link>
-          <Link href="/business" className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
+          <Link href="/business" onClick={closeMenu} className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
             Business Solutions
           </Link>
-          <Link href="/sustainability" className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
+          <Link href="/sustainability" onClick={closeMenu} className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
             Sustainability
           </Link>
-          <Link href="/security" className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
+          <Link href="/security" onClick={closeMenu} className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
             Security
           </Link>
         </div>
