@@ -14,10 +14,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   const login = (email: string, pass: string): boolean => {
     // Simple frontend check (not secure)
-    const correctEmail = 'visitor@sprin7.com';
+    const validEmails = ['visitor@sprin7.com', 'y.paramitasari@sprin7.com', 's.sharma@sprin7.com'];
     const correctPass = 'Sprin7!';
 
-    if (email === correctEmail && pass === correctPass) {
+    if (validEmails.includes(email) && pass === correctPass) {
       setIsAuthenticated(true);
       return true;
     } else {

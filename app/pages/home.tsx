@@ -203,15 +203,15 @@ export default function Home() {
                     initial: { opacity: 0, scale: 0.9 },
                     animate: { opacity: 1, scale: 1, transition: { delay: index * 0.1 } }
                   }}
-                  className="group relative aspect-square"
+                  className="group relative"
                 >
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                  <div className="relative bg-gray-900 rounded-xl p-6 h-full hover:transform hover:scale-[1.02] transition duration-300 flex flex-col items-center justify-center text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                  <div className="relative bg-gray-900 rounded-xl p-4 md:p-6 h-full hover:transform hover:scale-[1.02] transition duration-300 flex flex-col items-center justify-center text-center">
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-3 md:mb-4">
                       {feature.icon}
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 text-purple-200">{feature.title}</h3>
-                    <p className="text-purple-100/70">{feature.description}</p>
+                    <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-purple-200">{feature.title}</h3>
+                    <p className="text-sm md:text-base text-purple-100/70">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -247,7 +247,7 @@ export default function Home() {
                 <div className="relative bg-gray-900 rounded-2xl p-8 h-full">
                   <div className="flex items-center justify-center mb-6">
                     <Image
-                      src="/sprin7-website/apple-14-white.png"
+                      src="/apple-14-white.png"
                       alt="iOS App"
                       width={60}
                       height={60}
@@ -277,7 +277,7 @@ export default function Home() {
                 <div className="relative bg-gray-900 rounded-2xl p-8 h-full">
                   <div className="flex items-center justify-center mb-6">
                     <Image
-                      src="/sprin7-website/android-official.svg"
+                      src="/android-official.svg"
                       alt="Android App"
                       width={60}
                       height={60}

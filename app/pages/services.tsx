@@ -150,13 +150,13 @@ export default function Services() {
                   initial: { opacity: 0, y: 20 },
                   animate: { opacity: 1, y: 0, transition: { delay: index * 0.1 } }
                 }}
-                className="group relative aspect-square"
+                className="group relative"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                <div className="relative bg-gray-900 rounded-xl p-4 h-full hover:transform hover:scale-[1.02] transition duration-300 flex flex-col items-center justify-center text-center">
-                  <method.icon className="w-12 h-12 text-purple-400 mb-3" />
-                  <h3 className="text-lg font-semibold mb-2 text-purple-200">{method.title}</h3>
-                  <p className="text-sm text-purple-100/70">{method.description}</p>
+                <div className="relative bg-gray-900 rounded-xl p-3 md:p-4 h-full hover:transform hover:scale-[1.02] transition duration-300 flex flex-col items-center justify-center text-center">
+                  <method.icon className="w-8 h-8 md:w-12 md:h-12 text-purple-400 mb-2 md:mb-3" />
+                  <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-2 text-purple-200">{method.title}</h3>
+                  <p className="text-xs md:text-sm text-purple-100/70">{method.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -193,7 +193,7 @@ export default function Services() {
               variants={staggerContainer}
             >
               <h3 className="text-3xl font-semibold text-center text-purple-200 mb-12">Our Partners</h3>
-              <div className="grid grid-cols-5 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {partners.map((partner, index) => (
                   <motion.div
                     key={index}
