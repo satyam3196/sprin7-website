@@ -59,7 +59,9 @@ export default function Home() {
                   variants={fadeInUp}
                   className="text-5xl md:text-7xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
                 >
-                  Wanna get something? Just Sprin7 it!
+                  Wanna get something? 
+                  <br />
+                  Just Sprin7 it!
                 </motion.h1>
                 <motion.h2 
                   variants={fadeInUp}
