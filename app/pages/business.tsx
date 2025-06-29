@@ -191,7 +191,7 @@ export default function Business() {
               href="#partner"
               className="relative px-12 py-4 bg-black rounded-full text-xl text-white font-semibold hover:bg-gray-900 transition"
             >
-              Request Business Partnership
+              Coming Soon
             </Link>
           </motion.div>
         </div>

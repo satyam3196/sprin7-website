@@ -25,6 +25,9 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center space-x-8 relative">
+          <Link href="/" className="text-purple-200 hover:text-white transition duration-150">
+            Home
+          </Link>
           <Link href="/about" className="text-purple-200 hover:text-white transition duration-150">
             About
           </Link>
@@ -75,6 +78,9 @@ const Navbar = () => {
       {/* Mobile menu, show/hide based on menu state */}
       <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
         <div className="px-2 pt-2 pb-3 space-y-1 bg-gradient-to-b from-gray-900 to-purple-900/95 relative">
+          <Link href="/" onClick={closeMenu} className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
+            Home
+          </Link>
           <Link href="/about" onClick={closeMenu} className="block px-3 py-2 text-purple-200 hover:text-white transition duration-150">
             About
           </Link>

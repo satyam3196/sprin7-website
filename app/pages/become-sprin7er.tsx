@@ -198,7 +198,7 @@ export default function BecomeSprin7er() {
               href="#apply"
               className="relative px-12 py-4 bg-black rounded-full text-xl text-white font-semibold hover:bg-gray-900 transition"
             >
-              Apply Now
+              Coming Soon
             </Link>
           </motion.div>
         </div>

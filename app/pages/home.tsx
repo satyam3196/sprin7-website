@@ -67,24 +67,18 @@ export default function Home() {
                   variants={fadeInUp}
                   className="text-xl md:text-2xl text-purple-200"
                 >
-                  Swift Safe Sustainable Delivery Service
+                  Swift Safe Sustainable Service
                 </motion.h2>
                 <motion.p 
                   variants={fadeInUp}
                   className="text-lg text-purple-100/80"
                 >
-                  Sprin7 is a game-changer delivery service with eco-conscious and secured verification system
+                  Sprin7 is a game-changer, eco-conscious, secured and community led service.
                 </motion.p>
                 <motion.div 
                   variants={fadeInUp}
                   className="flex flex-wrap gap-4"
                 >
-                  <Link href="#download" className="relative inline-flex group">
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full blur opacity-50 group-hover:opacity-100 transition"></div>
-                    <button className="relative px-8 py-3 bg-black rounded-full text-white font-semibold hover:bg-gray-900 transition">
-                      Download App
-                    </button>
-                  </Link>
                   <Link href="/become-sprin7er" className="relative inline-flex group">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur opacity-50 group-hover:opacity-100 transition"></div>
                     <button className="relative px-8 py-3 bg-purple-900 rounded-full text-white font-semibold hover:bg-purple-800 transition">
@@ -231,10 +225,10 @@ export default function Home() {
             className="container mx-auto px-4 text-center relative"
           >
             <h2 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
-              Experience Sprin7 today!
+              Coming Soon!
             </h2>
             <p className="text-xl mb-12 text-purple-200">
-              Download our app and join London's sustainable delivery revolution.
+              It will be available soon on iOS and Android
             </p>
             
             <div className="flex flex-col md:flex-row justify-center items-center gap-8">
@@ -256,15 +250,11 @@ export default function Home() {
                       className="relative"
                     />
                   </div>
-                  <Link 
-                    href="#" 
-                    className="relative inline-flex group w-full justify-center"
-                  >
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur opacity-50 group-hover:opacity-100 transition"></div>
-                    <span className="relative px-8 py-3 bg-black rounded-full text-white font-semibold w-full hover:bg-gray-900 transition">
-                      Download for iOS
+                  <div className="text-center">
+                    <span className="text-purple-200 font-semibold">
+                      Available soon on iOS
                     </span>
-                  </Link>
+                  </div>
                 </div>
               </motion.div>
 
@@ -286,15 +276,11 @@ export default function Home() {
                       className="relative"
                     />
                   </div>
-                  <Link 
-                    href="#" 
-                    className="relative inline-flex group w-full justify-center"
-                  >
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur opacity-50 group-hover:opacity-100 transition"></div>
-                    <span className="relative px-8 py-3 bg-black rounded-full text-white font-semibold w-full hover:bg-gray-900 transition">
-                      Download for Android
+                  <div className="text-center">
+                    <span className="text-purple-200 font-semibold">
+                      Available soon on Android
                     </span>
-                  </Link>
+                  </div>
                 </div>
               </motion.div>
             </div>

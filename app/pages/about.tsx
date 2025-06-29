@@ -53,7 +53,7 @@ export default function About() {
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-purple-100/80 leading-relaxed text-justify"
+              className="text-xl text-purple-100/80 leading-relaxed text-left"
             >
               Sprin7 was born from a simple observation: urban deliveries could be faster, more efficient, and significantly more sustainable. Founded in London in 2025, we've built a platform that connects users with eco-conscious couriers—Sprin7ers—who deliver packages swiftly with minimum pollutions.
             </motion.p>
