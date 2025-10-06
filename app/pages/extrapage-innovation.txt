@@ -1,0 +1,311 @@
+'use client';
+
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.5 }
+};
+
+const staggerContainer = {
+  animate: { transition: { staggerChildren: 0.1 } }
+};
+
+const pillars = [
+  {
+    title: "AI Matching & Routing",
+    description:
+      "Intelligent pairing for two sides of the platform: creator–brand matching for campaigns and low-emission routing for deliveries."
+  },
+  {
+    title: "Verified Identity & Safety",
+    description:
+      "Real-name verification for Sprin7ers and creators, IRL profiles, transparent tracking, and an in-app emergency dial."
+  },
+  {
+    title: "Carbon Intelligence",
+    description:
+      "Per-delivery carbon estimates and campaign impact metrics. Zero-emission modes are prioritised by default."
+  },
+  {
+    title: "Sustainable Marketplace Integration",
+    description:
+      "One place to discover ethical retailers, run local creator campaigns, and fulfil purchases via green logistics."
+  }
+];
+
+const businessModel = [
+  { title: "Deliveries", description: "Transparent fee per job based on distance, mode, size, and urgency." },
+  { title: "Marketplace", description: "Commission on orders fulfilled via Sprin7." },
+  { title: "Marketing", description: "Campaign setup fee + performance-based payouts; optional SaaS analytics for brands." },
+  { title: "Enterprise", description: "Custom SLAs, reporting, and integrations for partners." }
+];
+
+const roadmap = [
+  {
+    period: "0–6 months",
+    items: [
+      "MVP: delivery + creator matching in one app",
+      "Pilot: London boroughs with local retailers and uni societies",
+      "Carbon reporting v0 (per-delivery estimates)"
+    ]
+  },
+  {
+    period: "6–12 months",
+    items: [
+      "Scale to additional UK cities",
+      "Campaign analytics dashboard (clicks, conversions)",
+      "Retailer integration API (order → green fulfilment)"
+    ]
+  },
+  {
+    period: "12–24 months",
+    items: [
+      "Nationwide coverage for priority corridors",
+      "Advanced matching models and fraud prevention",
+      "Enterprise features (procurement, audits, SLAs)"
+    ]
+  }
+];
+
+const risks = [
+  { title: "Supply Concentration", mitigation: "Multi-channel onboarding for Sprin7ers and creators; incentives during peak demand." },
+  { title: "Quality & Fraud", mitigation: "Verification, IRL profiles, content checks, escrow/milestone payouts, anomaly detection." },
+  { title: "Compliance", mitigation: "GDPR-first data design; clear ad disclosures; UK right-to-work verification; insurance coverage." },
+  { title: "Unit Economics", mitigation: "Zero-emission priority to reduce costs; batching/route optimisation; performance-based marketing fees." }
+];
+
+export default function Innovation() {
+  return (
+    <main className="min-h-screen bg-white font-inter">
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-white">
+        <div className="container mx-auto px-4 py-24 md:py-32">
+          <motion.div
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <motion.h1
+              variants={fadeInUp}
+              className="text-4xl md:text-5xl font-bold text-deep-teal mb-6"
+            >
+              Innovation Overview
+            </motion.h1>
+            <motion.p
+              variants={fadeInUp}
+              className="text-lg text-gray-700"
+            >
+              Sprin7 unifies eco-friendly last-mile delivery with AI-driven creator marketing.
+              One platform for <span className="font-semibold">swift logistics</span> and
+              <span className="font-semibold"> measurable growth</span>, built on safety, sustainability, and community.
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Problem & Solution */}
+      <section className="py-16 bg-cloud-gray">
+        <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10 max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl p-6 shadow-md border-2 border-deep-teal/10"
+          >
+            <h2 className="text-2xl font-semibold text-deep-teal mb-3">The Problem</h2>
+            <ul className="list-disc pl-5 space-y-2 text-gray-700">
+              <li>Urban deliveries face congestion, emissions, and trust gaps.</li>
+              <li>SMEs struggle to convert attention into sales; influencer marketing is fragmented and hard to measure.</li>
+              <li>Customer expectations for speed, safety, and sustainability keep rising.</li>
+            </ul>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-white rounded-2xl p-6 shadow-md border-2 border-deep-teal/10"
+          >
+            <h2 className="text-2xl font-semibold text-deep-teal mb-3">Our Solution</h2>
+            <p className="text-gray-700">
+              A single, verified network where sustainable deliveries and creator campaigns reinforce each other:
+              AI routes green fulfilment, matches brands to aligned creators, and reports both commercial and environmental impact.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Innovation Pillars */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center mb-12 text-deep-teal"
+          >
+            What’s Innovative
+          </motion.h2>
+
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            {pillars.map((p, i) => (
+              <motion.div
+                key={i}
+                variants={{
+                  initial: { opacity: 0, y: 20 },
+                  animate: { opacity: 1, y: 0, transition: { delay: i * 0.05 } }
+                }}
+                className="group relative"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                <div className="relative bg-white rounded-2xl p-6 h-full shadow-md border-2 border-deep-teal/10">
+                  <h3 className="text-xl font-bold text-deep-teal mb-2">{p.title}</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">{p.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Business Model */}
+      <section className="py-16 bg-cloud-gray">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center mb-12 text-deep-teal"
+          >
+            Business Model
+          </motion.h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {businessModel.map((b, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6 shadow-md border-2 border-deep-teal/10">
+                <h3 className="text-lg font-semibold text-deep-teal mb-1">{b.title}</h3>
+                <p className="text-gray-700 text-sm">{b.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Market Validation (early signals) */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center mb-12 text-deep-teal"
+          >
+            Early Signals
+          </motion.h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-deep-teal/10">
+              <h3 className="text-lg font-semibold text-deep-teal mb-1">Customer Discovery</h3>
+              <p className="text-gray-700 text-sm">Interviews with local retailers and student groups indicate demand for faster green fulfilment and transparent creator partnerships.</p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-deep-teal/10">
+              <h3 className="text-lg font-semibold text-deep-teal mb-1">Waitlist & Pilots</h3>
+              <p className="text-gray-700 text-sm">Initial waitlist for merchants, creators, and couriers; pilot plans focused on London zones with dense student and retail activity.</p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-deep-teal/10">
+              <h3 className="text-lg font-semibold text-deep-teal mb-1">Unit Assumptions</h3>
+              <p className="text-gray-700 text-sm">Zero-emission mode share and route optimisation targeted to improve per-order margins while maintaining fair pay.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Roadmap */}
+      <section className="py-16 bg-cloud-gray">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center mb-12 text-deep-teal"
+          >
+            Roadmap
+          </motion.h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {roadmap.map((r, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6 shadow-md border-2 border-deep-teal/10">
+                <h3 className="text-lg font-semibold text-deep-teal mb-2">{r.period}</h3>
+                <ul className="list-disc pl-5 space-y-2 text-gray-700 text-sm">
+                  {r.items.map((it, idx) => <li key={idx}>{it}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Risks & Mitigations */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center mb-12 text-deep-teal"
+          >
+            Risks & Mitigations
+          </motion.h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {risks.map((r, i) => (
+              <div key={i} className="bg-white rounded-2xl p-6 shadow-md border-2 border-deep-teal/10">
+                <h3 className="text-lg font-semibold text-deep-teal">{r.title}</h3>
+                <p className="text-gray-700 text-sm mt-2">{r.mitigation}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance & Data */}
+      <section className="py-16 bg-cloud-gray">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center mb-6 text-deep-teal"
+          >
+            Compliance & Data Practices
+          </motion.h2>
+          <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-deep-teal/10">
+            <ul className="list-disc pl-5 space-y-2 text-gray-700 text-sm">
+              <li>GDPR-first design, minimal data collection, and clear user consent flows.</li>
+              <li>Advertising disclosure prompts for creators; brand-safety checks for campaigns.</li>
+              <li>Right-to-work verification for couriers; appropriate insurance and safety training.</li>
+              <li>Security controls for payments, identity, and content moderation.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-deep-teal mb-3">Contact & Next Steps</h2>
+          <p className="text-gray-700">
+            We’re building with universities, local retailers, and creators across the UK.
+            For pilot partnerships and endorsements, please get in touch.
+          </p>
+        </div>
+      </section>
+    </main>
+  );
+}

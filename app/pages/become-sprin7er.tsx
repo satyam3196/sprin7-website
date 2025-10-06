@@ -12,110 +12,217 @@ const fadeInUp = {
 
 const staggerContainer = {
   animate: {
-    transition: {
-      staggerChildren: 0.1
-    }
+    transition: { staggerChildren: 0.1 }
   }
 };
 
-const requirements = [
+const earnPaths = [
+  {
+    title: "Deliveries",
+    blurb:
+      "Accept jobs that suit your schedule—walk, cycle, e-bike, or EV. Get paid per delivery with tips and surge during busy hours.",
+    points: ["Instant jobs", "Keep tips", "Insurance & safety support"]
+  },
+  {
+    title: "Creator Campaigns",
+    blurb:
+      "Match with brands that fit your audience and values. Earn from fixed deliverables or performance (clicks/sales).",
+    points: ["AI matching", "ASA-compliant tools", "Transparent analytics"]
+  }
+];
+
+const courierRequirements = [
   "18+ years of age",
   "Smartphone with reliable internet connection",
   "Valid ID and right to work in the UK",
   "Clean background check",
-  "Your own transportation method (walking, bicycle, e-bike, or electric/hybrid vehicle)",
+  "Own transport (walk, cycle, e-bike, or EV)",
   "Commitment to sustainability and excellent service"
 ];
 
-const benefits = [
-  "Flexible working hours",
-  "Competitive compensation rates",
-  "Be part of an eco-conscious community",
-  "Reduced carbon footprint",
-  "Exercise while you earn ",
-  "Contribute to cleaner air in London"
+const creatorRequirements = [
+  "18+ years of age",
+  "Valid ID and right to work in the UK",
+  "Public social profiles with authentic engagement",
+  "Willing to follow ASA/FTC disclosure rules",
+  "Pass brand-safety & content quality review",
+  "Alignment with sustainable values"
 ];
 
-const applicationSteps = [
+const benefits = [
+  // Shared / delivery-leaning
+  "Flexible hours—work when you want",
+  "Competitive earnings with surge & tips",
+  "Be part of an eco-conscious community",
+  "Reduced carbon footprint while you earn",
+  "Stay active: walk or cycle jobs",
+  "Insurance & safety features in-app",
+  // Creator-leaning
+  "Campaign bonuses & rewards",
+  "Build your portfolio with ethical brands",
+  "Live analytics to learn & grow"
+];
+
+const deliverySteps = [
   "Complete the online application",
-  "Submit required documentation",
-  "Attend virtual onboarding session",
-  "Complete training modules",
+  "Submit right-to-work & ID for verification",
+  "Attend virtual onboarding",
+  "Complete safety & transport training",
   "Start accepting deliveries!"
+];
+
+const creatorSteps = [
+  "Create your creator profile & link socials",
+  "Pass verification & brand-safety checks",
+  "Set your deliverables and rates",
+  "Receive AI-matched briefs & apply",
+  "Launch, track results, and get paid"
 ];
 
 export default function BecomeSprin7er() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-800">
+    <main className="min-h-screen bg-white font-inter">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-        <div className="container mx-auto px-4 py-24 relative">
+      <section className="relative overflow-hidden bg-white">
+        <div className="container mx-auto px-4 py-32 relative">
           <motion.div
             initial="initial"
             animate="animate"
             variants={staggerContainer}
-            className="max-w-4xl mx-auto text-center space-y-8"
+            className="flex flex-col items-center justify-center max-w-4xl mx-auto"
           >
-            <motion.h1
+            <motion.h2
               variants={fadeInUp}
-              className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+              className="text-5xl font-bold text-center mb-16 text-deep-teal"
             >
-              Become a Sprin7er
-            </motion.h1>
+              Build Income
+            </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-purple-100/80 leading-relaxed"
+              className="text-lg text-gray-700 max-w-3xl mx-auto text-justify"
             >
-              Become part of London's sustainable delivery revolution. As a Sprin7er, you'll earn competitive compensation and benefits while contributing to a greener future for urban logistics.
+              Earn on your terms with Sprin7. Choose Deliveries for flexible local jobs—or become a Creator
+              to collaborate with ethical brands. Either way, you’ll be part of London’s swift, safe, and sustainable
+              movement.
             </motion.p>
           </motion.div>
         </div>
       </section>
 
-      {/* Requirements Section */}
-      <section className="py-20 relative">
+      {/* Ways to Earn */}
+      <section className="py-20 relative bg-cloud-gray">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+            className="text-5xl font-bold text-center mb-16 text-deep-teal"
           >
-            Requirements
+            Two Ways to Earn
           </motion.h2>
+
           <motion.div
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto"
+            className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto"
           >
-            {requirements.map((requirement, index) => (
+            {earnPaths.map((card, i) => (
               <motion.div
-                key={index}
+                key={i}
                 variants={{
-                  initial: { opacity: 0, x: -20 },
-                  animate: { opacity: 1, x: 0, transition: { delay: index * 0.1 } }
+                  initial: { opacity: 0, y: 20 },
+                  animate: { opacity: 1, y: 0, transition: { delay: i * 0.1 } }
                 }}
-                className="flex items-center space-x-4 bg-gray-900/50 p-4 rounded-lg"
+                className="group relative"
               >
-                <div className="h-2 w-2 bg-gradient-to-r from-purple-400 to-pink-300 rounded-full" />
-                <p className="text-purple-100">{requirement}</p>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                <div className="relative bg-white rounded-xl p-8 shadow-md border-2 border-deep-teal/10 h-full">
+                  <h3 className="text-2xl font-bold mb-3 text-deep-teal">{card.title}</h3>
+                  <p className="text-gray-700 mb-4">{card.blurb}</p>
+                  <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700">
+                    {card.points.map((p, idx) => <li key={idx}>{p}</li>)}
+                  </ul>
+                </div>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 relative">
+      {/* Requirements Section */}
+      <section className="py-20 relative bg-white">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+            className="text-5xl font-bold text-center mb-16 text-deep-teal"
+          >
+            Requirements
+          </motion.h2>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Delivery Requirements */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+              <div className="relative bg-white rounded-xl p-6 shadow-md border-2 border-deep-teal/10">
+                <h3 className="text-2xl font-semibold text-deep-teal mb-4">Delivery Sprin7er</h3>
+                <div className="grid sm:grid-cols-1 gap-3">
+                  {courierRequirements.map((req, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center space-x-3 bg-white p-3 rounded-lg border border-deep-teal/10"
+                    >
+                      <div className="h-2 w-2 bg-electric-lime rounded-full" />
+                      <p className="text-gray-700">{req}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Creator Requirements */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="group relative"
+            >
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+              <div className="relative bg-white rounded-xl p-6 shadow-md border-2 border-deep-teal/10">
+                <h3 className="text-2xl font-semibold text-deep-teal mb-4">Creator Sprin7er</h3>
+                <div className="grid sm:grid-cols-1 gap-3">
+                  {creatorRequirements.map((req, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center space-x-3 bg-white p-3 rounded-lg border border-deep-teal/10"
+                    >
+                      <div className="h-2 w-2 bg-electric-lime rounded-full" />
+                      <p className="text-gray-700">{req}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 relative bg-cloud-gray">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-5xl font-bold text-center mb-16 text-deep-teal"
           >
             Benefits
           </motion.h2>
@@ -131,13 +238,13 @@ export default function BecomeSprin7er() {
                 key={index}
                 variants={{
                   initial: { opacity: 0, y: 20 },
-                  animate: { opacity: 1, y: 0, transition: { delay: index * 0.1 } }
+                  animate: { opacity: 1, y: 0, transition: { delay: index * 0.05 } }
                 }}
                 className="group relative"
               >
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                <div className="relative bg-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-[1.02] transition duration-300">
-                  <p className="text-purple-100">{benefit}</p>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                <div className="relative bg-white rounded-xl p-6 text-center shadow-md border-2 border-deep-teal/10">
+                  <p className="text-gray-700">{benefit}</p>
                 </div>
               </motion.div>
             ))}
@@ -146,25 +253,28 @@ export default function BecomeSprin7er() {
       </section>
 
       {/* Application Process Section */}
-      <section className="py-20 relative">
+      <section className="py-20 relative bg-white">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+            className="text-5xl font-bold text-center mb-16 text-deep-teal"
           >
             Application Process
           </motion.h2>
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="space-y-8">
-              {applicationSteps.map((step, index) => (
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Delivery Track */}
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+              className="space-y-8"
+            >
+              <h3 className="text-2xl font-semibold text-deep-teal">Delivery Track</h3>
+              {deliverySteps.map((step, index) => (
                 <motion.div
                   key={index}
                   variants={{
@@ -173,36 +283,67 @@ export default function BecomeSprin7er() {
                   }}
                   className="flex items-center space-x-6"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-xl font-bold text-white">
+                  <div className="flex-shrink-0 w-12 h-12 bg-deep-teal rounded-full flex items-center justify-center text-xl font-bold text-white">
                     {index + 1}
                   </div>
-                  <p className="text-xl text-purple-100">{step}</p>
+                  <p className="text-xl text-gray-700">{step}</p>
                 </motion.div>
               ))}
-            </div>
-          </motion.div>
+            </motion.div>
+
+            {/* Creator Track */}
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+              className="space-y-8"
+            >
+              <h3 className="text-2xl font-semibold text-deep-teal">Creator Track</h3>
+              {creatorSteps.map((step, index) => (
+                <motion.div
+                  key={index}
+                  variants={{
+                    initial: { opacity: 0, x: -20 },
+                    animate: { opacity: 1, x: 0, transition: { delay: index * 0.1 } }
+                  }}
+                  className="flex items-center space-x-6"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 bg-deep-teal rounded-full flex items-center justify-center text-xl font-bold text-white">
+                    {index + 1}
+                  </div>
+                  <p className="text-xl text-gray-700">{step}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative">
+      <section className="py-20 relative bg-cloud-gray">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative inline-flex group"
+            className="inline-flex flex-wrap items-center justify-center gap-4"
           >
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur opacity-75 group-hover:opacity-100 transition"></div>
             <Link
-              href="#apply"
-              className="relative px-12 py-4 bg-black rounded-full text-xl text-white font-semibold hover:bg-gray-900 transition"
+              href="#apply-delivery"
+              className="px-10 py-4 bg-deep-teal rounded-full text-lg text-white font-semibold hover:bg-deep-teal/90 transition"
             >
-              Coming Soon
+              Delivery — Coming Soon
+            </Link>
+            <Link
+              href="#apply-creator"
+              className="px-10 py-4 bg-deep-teal rounded-full text-lg text-white font-semibold hover:opacity-90 transition"
+            >
+              Creator — Coming Soon
             </Link>
           </motion.div>
         </div>
       </section>
     </main>
   );
-} 
+}

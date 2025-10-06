@@ -1,35 +1,36 @@
 import Link from 'next/link';
-import { FaCopyright, FaGooglePlay, FaApple } from 'react-icons/fa';
+import { FaCopyright, FaGooglePlay, FaApple, FaRegistered } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-deep-teal text-white">
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <div className="flex items-center mb-2">
-              <FaCopyright className="mr-2" />
-              <span>NEWMINT TECHNOLOGIES LTD 2025</span>
+            <h3 className="text-xl font-semibold mb-4 text-electric-lime">Company</h3>
+            <div className="flex items-center mb-2 space-x-2">
+              <FaCopyright className="text-lg" />
+              <span className="flex items-center space-x-1">
+                <span>Newmint Technologies Ltd 2025</span>
+                <FaRegistered className="text-lg opacity-90" />
+              </span>
             </div>
-            <p className="text-sm">
+            <p className="text-sm text-white/90">
               Registered in England and Wales<br />
-              {/* Contact: support@sprin7.com<br /> */}
-              Phone: +44 7466469098 <br />
-              {/* Support hours: 8am-10pm, 7 days a week  */}
+              Phone: +44 7466469098<br />
             </p>
           </div>
 
           {/* Coming Soon */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Coming Soon</h3>
+            <h3 className="text-xl font-semibold mb-4 text-electric-lime">Coming Soon</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-2 text-purple-200">
+              <div className="flex items-center space-x-2 text-white/90">
                 <FaApple size={24} />
                 <span>Available soon on iOS</span>
               </div>
-              <div className="flex items-center space-x-2 text-purple-200">
+              <div className="flex items-center space-x-2 text-white/90">
                 <FaGooglePlay size={24} />
                 <span>Available soon on Google Play</span>
               </div>
@@ -37,12 +38,19 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
-          <p>&copy; {new Date().getFullYear()} NEWMINT TECHNOLOGIES LTD. All rights reserved.</p>
+        <div className="border-t border-white/20 mt-8 pt-8 text-sm">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; {new Date().getFullYear()} NEWMINT TECHNOLOGIES LTD. All rights reserved.</p>
+            <div className="flex gap-6">
+              <Link href="/privacy-policy" className="text-white/90 hover:text-electric-lime transition">
+                Privacy Policy
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
 
-export default Footer; 
+export default Footer;

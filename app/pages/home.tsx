@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Script from 'next/script';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -29,80 +28,51 @@ export default function Home() {
 
   return (
     <>
-      {/* Google Analytics */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-CY5S612NZT"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-CY5S612NZT');
-        `}
-      </Script>
-      
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-800">
+      <main className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
-          <div className="container mx-auto px-4 py-24 relative">
+        <section className="relative overflow-hidden bg-white">
+          <div className="container mx-auto px-4 py-32 relative">
             <motion.div 
               initial="initial"
               animate="animate"
               variants={staggerContainer}
-              className="flex flex-col md:flex-row items-center justify-between gap-12"
+              className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto"
             >
-              <div className="md:w-1/2 space-y-8">
+              <div className="space-y-8">
                 <motion.h1 
                   variants={fadeInUp}
-                  className="text-5xl md:text-7xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+                  className="text-5xl md:text-7xl font-bold leading-tight text-deep-teal"
                 >
-                  Wanna get something? 
-                  <br />
-                  Just Sprin7 it!
+                  Time to Sprin7 ! 
                 </motion.h1>
                 <motion.h2 
                   variants={fadeInUp}
-                  className="text-xl md:text-2xl text-purple-200"
+                  className="text-xl md:text-2xl text-gray-800 font-semibold"
                 >
-                  Swift Safe Sustainable Service
+                  AI-Powered Swift, Safe, and Sustainable Services
                 </motion.h2>
                 <motion.p 
                   variants={fadeInUp}
-                  className="text-lg text-purple-100/80"
+                  className="text-lg text-gray-700 max-w-3xl"
                 >
-                  Sprin7 is a game-changer, eco-conscious, secured and community led service.
+                  Connecting people in getting swift, safe, sustainable services to have an easy sustainable lifestyle and boost the economy. 
                 </motion.p>
-                <motion.div 
-                  variants={fadeInUp}
-                  className="flex flex-wrap gap-4"
-                >
-                  <Link href="/become-sprin7er" className="relative inline-flex group">
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur opacity-50 group-hover:opacity-100 transition"></div>
-                    <button className="relative px-8 py-3 bg-purple-900 rounded-full text-white font-semibold hover:bg-purple-800 transition">
-                      Become a Sprin7er
-                    </button>
-                  </Link>
-                  <Link href="#features" className="px-8 py-3 border-2 border-purple-400 text-purple-200 rounded-full font-semibold hover:bg-purple-400/10 transition">
-                    Learn More
-                  </Link>
-                </motion.div>
               </div>
+              
+              {/* Hero Image */}
               <motion.div 
-                className="md:w-1/2 relative"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                className="mt-16 w-full"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <div className="relative w-full aspect-[3/4] max-w-[400px] mx-auto">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl blur-2xl opacity-30"></div>
+                <div className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl aspect-[16/9]">
                   <Image
-                    src="/phone-mockup.jpg"
-                    alt="Sprin7 App"
+                    src="/1.png"
+                    alt="Sprin7 Hero - AI-Powered Swift, Safe, and Sustainable Services"
                     fill
-                    className="object-contain relative z-10"
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                     priority
                   />
                 </div>
@@ -111,79 +81,174 @@ export default function Home() {
           </div>
         </section>
 
-        {/* How It Works Section */}
-        <section className="py-20 relative">
+
+        {/* Just Sprin7 it! Section */}
+        <section className="py-20 relative overflow-hidden bg-cloud-gray">
           <div className="container mx-auto px-4">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+              className="text-5xl font-bold text-center mb-16 text-deep-teal"
             >
               Just Sprin7 it!
             </motion.h2>
+
+            {/* 3x2 Grid: 6 cards total */}
             <motion.div 
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
               variants={staggerContainer}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6"
             >
-              {steps.map((step, index) => (
-                <motion.div
-                  key={index}
-                  variants={{
-                    initial: { opacity: 0, y: 20 },
-                    animate: { opacity: 1, y: 0, transition: { delay: index * 0.1 } }
-                  }}
-                  className="group relative"
-                >
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                  <div className="relative bg-gray-900 rounded-xl p-6 hover:transform hover:scale-[1.02] transition duration-300">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-4 text-xl font-bold text-white">
-                      {index + 1}
+              {/* Row 1 - Column 1: Image 1 */}
+              <motion.div
+                variants={{
+                  initial: { opacity: 0, y: 20 },
+                  animate: { opacity: 1, y: 0, transition: { delay: 0.1 } }
+                }}
+                className="relative rounded-xl overflow-hidden shadow-lg h-[300px]"
+              >
+                <Image
+                  src="/2.png"
+                  alt="Sustainability Initiative"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  priority
+                />
+              </motion.div>
+
+              {/* Row 1 - Column 2: Card 1 - Our Commitment */}
+              <motion.div
+                variants={{
+                  initial: { opacity: 0, y: 20 },
+                  animate: { opacity: 1, y: 0, transition: { delay: 0.2 } }
+                }}
+                className="group relative h-[300px]"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                <div className="relative bg-white rounded-xl p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
+                  <h3 className="text-xl font-bold mb-3 text-deep-teal">Our Commitment</h3>
+                  <p className="text-gray-700 leading-relaxed text-sm">
+                    Sustainability isn't just a feature of Sprin7—it's our foundation. We're dedicated to proving that speed, safety, and convenience can go hand-in-hand with environmental responsibility and economy growth.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Row 1 - Column 3: Card 2 - Our Impact */}
+              <motion.div
+                variants={{
+                  initial: { opacity: 0, y: 20 },
+                  animate: { opacity: 1, y: 0, transition: { delay: 0.3 } }
+                }}
+                className="group relative h-[300px]"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                <div className="relative bg-white rounded-xl p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
+                  <h3 className="text-xl font-bold mb-3 text-deep-teal">Our Impact</h3>
+                  <p className="text-gray-700 leading-relaxed text-sm">
+                    Real-time metrics on avoided carbon emissions reporting.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Row 2 - Column 1: Image 2 */}
+              <motion.div
+                variants={{
+                  initial: { opacity: 0, y: 20 },
+                  animate: { opacity: 1, y: 0, transition: { delay: 0.4 } }
+                }}
+                className="relative rounded-xl overflow-hidden shadow-lg h-[300px]"
+              >
+                <Image
+                  // src="/4.jpg"
+                  src="/3.png"
+                  alt="Sustainability Goals"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </motion.div>
+
+              {/* Row 2 - Column 2: Card 3 - Initiatives */}
+              <motion.div
+                variants={{
+                  initial: { opacity: 0, y: 20 },
+                  animate: { opacity: 1, y: 0, transition: { delay: 0.5 } }
+                }}
+                className="group relative h-[300px]"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                <div className="relative bg-white rounded-xl p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
+                  <h3 className="text-xl font-bold mb-3 text-deep-teal">Initiatives</h3>
+                  <ul className="space-y-1.5 text-gray-700 text-sm">
+                    <li className="flex items-start">
+                      <span className="text-electric-lime mr-2">•</span>
+                      Zero-emission transport prioritisation
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-electric-lime mr-2">•</span>
+                      Sustainable packaging
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-electric-lime mr-2">•</span>
+                      Eco-conscious partnerships
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-electric-lime mr-2">•</span>
+                      Green Marketplace
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-electric-lime mr-2">•</span>
+                      Sustainable Marketing for Boosting Sustainable Values
+                    </li>
+                  </ul>
+                </div>
+              </motion.div>
+
+              {/* Row 2 - Column 3: Card 4 - Goals for 2027 */}
+              <motion.div
+                variants={{
+                  initial: { opacity: 0, y: 20 },
+                  animate: { opacity: 1, y: 0, transition: { delay: 0.6 } }
+                }}
+                className="group relative h-[300px]"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                <div className="relative bg-white rounded-xl p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
+                  <h3 className="text-xl font-bold mb-3 text-deep-teal">Goals for 2027</h3>
+                  <div className="space-y-3">
+                    <div>
+                      <div className="text-3xl font-bold text-electric-lime mb-1">75%</div>
+                      <p className="text-gray-700 text-sm">Zero-emission deliveries</p>
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-purple-200">{step.title}</h3>
-                    <p className="text-purple-100/70">{step.description}</p>
+                    <div>
+                      <div className="text-3xl font-bold text-electric-lime mb-1">5</div>
+                      <p className="text-gray-700 text-sm">Major UK cities with Sprin7 operations</p>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-electric-lime mb-1">30%</div>
+                      <p className="text-gray-700 text-sm">Reduction in urban delivery carbon footprint</p>
+                    </div>
                   </div>
-                </motion.div>
-              ))}
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </section>
 
-        {/* Cool Way Section */}
-        <section className="py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-purple-900/50 to-gray-900/50"></div>
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="container mx-auto px-4 relative"
-          >
-            <div className="max-w-3xl mx-auto">
-              <div className="bg-gray-900 rounded-2xl p-8 shadow-xl">
-                <h2 className="text-5xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
-                  'Cool' Way to Get your Stuff and Save the Earth
-                </h2>
-                <p className="text-xl text-purple-100/80 leading-relaxed text-justify">
-                  At Sprin7, both as a user and Sprin7er, we're together committed to revolutionising urban logistics through swift, safe, and sustainable practices. Our system will ensure the delivery process meets the zero or low-emission transportation methods, reduce the carbon footprint. Just use and enjoy our delivery service, you will experience how 'easy peasy lemon squeezy' to manifest cleaner, greener, and safer communities.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </section>
-
         {/* Features Section */}
-        <section id="features" className="py-20 relative">
+        <section id="features" className="py-20 relative bg-gradient-to-br from-deep-teal via-deep-teal to-deep-teal/90">
           <div className="container mx-auto px-4">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+              className="text-5xl font-bold text-center mb-16 text-white"
             >
-              Features
+              Our Swift, Safe, and Sustainable
             </motion.h2>
             <motion.div 
               initial="initial"
@@ -201,13 +266,13 @@ export default function Home() {
                   }}
                   className="group relative"
                 >
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                  <div className="relative bg-gray-900 rounded-xl p-4 md:p-6 h-full hover:transform hover:scale-[1.02] transition duration-300 flex flex-col items-center justify-center text-center">
-                    <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-3 md:mb-4">
+                  <div className="absolute -inset-0.5 bg-electric-lime/20 rounded-xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                  <div className="relative bg-deep-teal/95 backdrop-blur-sm rounded-xl p-4 md:p-6 h-full hover:transform hover:scale-[1.02] transition duration-300 flex flex-col items-center justify-center text-center shadow-lg border-2 border-electric-lime/30">
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-electric-lime to-signal-blue rounded-full flex items-center justify-center mb-3 md:mb-4">
                       {feature.icon}
                     </div>
-                    <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-purple-200">{feature.title}</h3>
-                    <p className="text-sm md:text-base text-purple-100/70">{feature.description}</p>
+                    <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-white">{feature.title}</h3>
+                    <p className="text-sm md:text-base text-white/90">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -216,18 +281,17 @@ export default function Home() {
         </section>
 
         {/* Download Section */}
-        <section id="download" className="py-20 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-purple-900/50 to-gray-900/50"></div>
+        <section id="download" className="py-20 relative overflow-hidden bg-white">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="container mx-auto px-4 text-center relative"
           >
-            <h2 className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300">
+            <h2 className="text-5xl font-bold mb-6 text-deep-teal">
               Coming Soon!
             </h2>
-            <p className="text-xl mb-12 text-purple-200">
+            <p className="text-xl mb-12 text-gray-700">
               It will be available soon on iOS and Android
             </p>
             
@@ -239,11 +303,11 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="group relative w-full max-w-sm"
               >
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                <div className="relative bg-gray-900 rounded-2xl p-8 h-full">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                <div className="relative bg-white rounded-2xl p-8 h-full border-2 border-deep-teal/20 shadow-md">
                   <div className="flex items-center justify-center mb-6">
                     <Image
-                      src="/apple-14-white.png"
+                      src="/apple-14.svg"
                       alt="iOS App"
                       width={60}
                       height={60}
@@ -251,7 +315,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="text-center">
-                    <span className="text-purple-200 font-semibold">
+                    <span className="text-gray-700 font-semibold">
                       Available soon on iOS
                     </span>
                   </div>
@@ -265,8 +329,8 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="group relative w-full max-w-sm"
               >
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                <div className="relative bg-gray-900 rounded-2xl p-8 h-full">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                <div className="relative bg-white rounded-2xl p-8 h-full border-2 border-deep-teal/20 shadow-md">
                   <div className="flex items-center justify-center mb-6">
                     <Image
                       src="/android-official.svg"
@@ -277,7 +341,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="text-center">
-                    <span className="text-purple-200 font-semibold">
+                    <span className="text-gray-700 font-semibold">
                       Available soon on Android
                     </span>
                   </div>
@@ -288,13 +352,13 @@ export default function Home() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 relative">
+        <section className="py-20 relative bg-cloud-gray">
           <div className="container mx-auto px-4">
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-300"
+              className="text-5xl font-bold text-center mb-16 text-deep-teal"
             >
               Frequently Asked Questions
             </motion.h2>
@@ -315,10 +379,10 @@ export default function Home() {
                   className="group relative"
                   onClick={() => handleFaqClick(index)}
                 >
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-                  <div className="relative bg-gray-900 rounded-xl p-6 hover:transform hover:scale-[1.01] transition duration-300 cursor-pointer">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                  <div className="relative bg-white rounded-xl p-6 hover:transform hover:scale-[1.01] transition duration-300 cursor-pointer shadow-md border-2 border-deep-teal/10">
                     <div className="flex justify-between items-center">
-                      <h3 className="text-xl font-semibold text-purple-200 pr-8">{faq.question}</h3>
+                      <h3 className="text-xl font-semibold text-deep-teal pr-8">{faq.question}</h3>
                       <div className={`transform transition-transform duration-300 ${openFaqIndex === index ? 'rotate-180' : ''}`}>
                         <svg 
                           xmlns="http://www.w3.org/2000/svg" 
@@ -327,7 +391,7 @@ export default function Home() {
                           fill="none" 
                           viewBox="0 0 24 24" 
                           stroke="currentColor" 
-                          className="text-purple-400"
+                          className="text-deep-teal"
                         >
                           <path 
                             strokeLinecap="round" 
@@ -347,7 +411,7 @@ export default function Home() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <p className="text-purple-100/70 mt-4">{faq.answer}</p>
+                      <p className="text-gray-700 mt-4">{faq.answer}</p>
                     </motion.div>
                   </div>
                 </motion.div>
@@ -360,32 +424,6 @@ export default function Home() {
   );
 }
 
-const steps = [
-  {
-    title: "Request a Delivery",
-    description: "Enter pickup and drop-off locations in the Sprin7 app"
-  },
-  {
-    title: "Choose Your Time of Delivery",
-    description: "Now or customise your desired time"
-  },
-  {
-    title: "Pick Your Delivery Option",
-    description: "Opt for walk, cycle, electric bike, or eco-friendly vehicle"
-  },
-        {
-          title: "Track in Real-Time",
-          description: "Follow your delivery's journey from pickup point to destination"
-        }, 
-        {
-          title: "Get Instant Proof of Delivery",
-          description: "Receive immediate confirmation and digital receipt of your completed delivery"
-        },
-  {
-    title: "Share your Feedback",
-    description: "Give us your honest feedback on how you find the Sprin7er who delivers your items"
-  }
-]
 
 const features = [
   {
@@ -403,6 +441,15 @@ const features = [
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    )
+  },
+  {
+    title: "Sustainable Marketing",
+    description: "AI-matched creators for ROI-driven campaigns; brands grow, Sprin7ers earn",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     )
   },
@@ -425,15 +472,6 @@ const features = [
     )
   },
   {
-    title: "Real-Time Updates",
-    description: "Follow your package every step of the way",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    )
-  },
-  {
     title: "Emergency Dial",
     description: "We care about our users and sprin7ers. Any suspicious activities or not feeling safe, click our emergency dial",
     icon: (
@@ -446,27 +484,39 @@ const features = [
 
 const faqs = [
   {
-    question: "How does Sprin7 ensure delivery safety?",
-    answer: "We implement a rigorous verification system for all Sprin7ers, real-time tracking, and an emergency dial feature. Each delivery is insured, and our platform maintains transparent communication between users and Sprin7ers throughout the delivery process."
+    question: "How does Sprin7 ensure delivery and campaign safety?",
+    answer: "We verify every Sprin7er (couriers and creators), use real-time tracking for deliveries, and provide an in-app Emergency Dial. Campaigns run through brand-safe briefs, content checks, and performance dashboards. All deliveries and eligible campaigns are covered by our policies."
   },
   {
-    question: "What are the requirements to become a Sprin7er?",
-    answer: "To become a Sprin7er, you must be 18+ years old, pass our background check, have a valid ID, provide proof of right to work in the UK, and complete our safety training program. For vehicle deliveries, you'll need appropriate licenses and insurance."
+    question: "What are the requirements to become a Sprin7er (courier or creator)?",
+    answer: "You must be 18+, pass our verification, and complete training. Couriers need right-to-work in the UK and (if applicable) valid licenses/insurance. Creators connect social profiles, pass brand-safety checks, and agree to disclosure guidelines."
   },
   {
     question: "How are delivery prices calculated?",
-    answer: "Prices are calculated based on distance, delivery method (walking, cycling, or vehicle), package size, and delivery urgency. We offer transparent pricing with no hidden fees, and you can see the exact cost before confirming your delivery."
+    answer: "By distance, delivery method (walking, cycling, or vehicle), package size, and urgency. Pricing is transparent—see the exact cost before confirming."
+  },
+  {
+    question: "How does influencer matching work on Sprin7?",
+    answer: "Share your campaign brief and goals; our AI matches you with verified creators by audience fit, location, and brand values. Approve matches, track clicks/sales in real time, and pay on milestones or results. Creators earn from successful campaigns."
+  },
+  {
+    question: "How are campaign fees and creator payouts set?",
+    answer: "Campaign pricing depends on creator reach/engagement, deliverables, format, and performance goals (e.g., CPA/CPS). Payouts are handled securely in-app with clear milestones and reporting."
   },
   {
     question: "What types of items can I send through Sprin7?",
-    answer: "You can send most legal items that can be safely transported by our Sprin7ers. This includes documents, packages, food, and small to medium-sized items. Dangerous goods, illegal items, and oversized packages are not permitted."
+    answer: "Most legal items that are safe for transport: documents, packages, food, and small/medium goods. No dangerous goods, illegal items, or oversize packages."
   },
   {
     question: "How does Sprin7 contribute to sustainability?",
-    answer: "We prioritize eco-friendly delivery methods like walking and cycling, use electric vehicles when motorized transport is necessary, and track carbon savings for each delivery. Our marketplace also promotes local, sustainable businesses."
+    answer: "We prioritize walking/cycling and EVs, track carbon savings per delivery, and spotlight eco-friendly merchants. Our marketing network promotes sustainable brands and behaviors."
   },
   {
     question: "What happens if my package is damaged or lost?",
-    answer: "All deliveries through Sprin7 are insured. If your package is damaged or lost, report it immediately through the app. Our support team will investigate and process your claim within 24-48 hours."
+    answer: "Deliveries are insured. Report issues in-app and our team will investigate and process your claim, typically within 24–48 hours."
+  },
+  {
+    question: "Do creators need to disclose sponsored content?",
+    answer: "Yes—creators must follow ASA/FTC disclosure rules. We provide disclosure prompts and tools in the brief flow."
   }
 ]; 

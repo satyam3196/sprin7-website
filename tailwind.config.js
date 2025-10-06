@@ -8,8 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#6B46C1',
-        secondary: '#9F7AEA',
+        'deep-teal': '#007A2C',
+        'electric-lime': '#A7FF1B',
+        'cloud-gray': '#F5F5F5',
+        'signal-blue': '#1E90FF',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
