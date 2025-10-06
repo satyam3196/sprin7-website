@@ -55,10 +55,10 @@ const ComingSoonModal = ({ isOpen, onClose }: ComingSoonModalProps) => {
         {/* Content */}
         <div className="text-center">
           <div className="mb-4">
-            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto">
+            <div className="w-16 h-16 bg-deep-teal rounded-full flex items-center justify-center mx-auto">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8 text-white"
+                className="h-8 w-8 text-electric-lime"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -78,7 +78,7 @@ const ComingSoonModal = ({ isOpen, onClose }: ComingSoonModalProps) => {
           </p>
           <button
             onClick={onClose}
-            className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition"
+            className="px-6 py-3 bg-deep-teal text-white rounded-full font-semibold hover:bg-electric-lime hover:text-deep-teal transition"
           >
             Got it!
           </button>
