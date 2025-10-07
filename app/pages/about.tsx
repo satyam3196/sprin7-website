@@ -121,9 +121,9 @@ export default function About() {
           className="group relative"
         >
           <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-          <div className="relative bg-white rounded-xl p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10 min-h-[280px]">
-            <h3 className="text-xl font-bold mb-3 text-deep-teal">{value.title}</h3>
-            <p className="text-gray-700 leading-relaxed text-sm">{value.description}</p>
+          <div className="relative bg-white rounded-xl p-4 md:p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10 md:min-h-[280px]">
+            <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">{value.title}</h3>
+            <p className="text-gray-700 leading-snug text-sm text-justify">{value.description}</p>
           </div>
         </motion.div>
       ))}

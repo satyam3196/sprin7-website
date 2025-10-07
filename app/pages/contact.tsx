@@ -57,8 +57,8 @@ export default function ContactUs() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Create mailto link to satyam3196@gmail.com
-    const mailtoLink = `mailto:satyam3196@gmail.com?subject=${encodeURIComponent(
+    // Create mailto link to team@sprin7.com
+    const mailtoLink = `mailto:team@sprin7.com?subject=${encodeURIComponent(
       `Sprin7 Contact Form - ${formData.subject}`
     )}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
@@ -109,7 +109,7 @@ export default function ContactUs() {
             </motion.h2>
             <motion.p
               variants={fadeInUp}
-              className="text-lg text-gray-700 max-w-3xl mx-auto text-center"
+              className="text-lg text-gray-700 max-w-3xl mx-auto text-center text-justify"
             >
               Have questions or want to learn more about Sprin7? We'd love to hear from you. Get in touch with our team and we'll respond as soon as possible.
             </motion.p>

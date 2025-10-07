@@ -100,7 +100,7 @@ export default function Home() {
               whileInView="animate"
               viewport={{ once: true }}
               variants={staggerContainer}
-              className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6"
+              className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6"
             >
               {/* Row 1 - Column 1: Image 1 */}
               <motion.div
@@ -108,7 +108,7 @@ export default function Home() {
                   initial: { opacity: 0, y: 20 },
                   animate: { opacity: 1, y: 0, transition: { delay: 0.1 } }
                 }}
-                className="relative rounded-xl overflow-hidden shadow-lg h-[300px]"
+                className="relative rounded-xl overflow-hidden shadow-lg h-[280px] md:h-[300px]"
               >
                 <Image
                   src="/2.png"
@@ -126,12 +126,12 @@ export default function Home() {
                   initial: { opacity: 0, y: 20 },
                   animate: { opacity: 1, y: 0, transition: { delay: 0.2 } }
                 }}
-                className="group relative h-[300px]"
+                className="group relative md:h-[300px]"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                <div className="relative bg-white rounded-xl p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
-                  <h3 className="text-xl font-bold mb-3 text-deep-teal">Our Commitment</h3>
-                  <p className="text-gray-700 leading-relaxed text-sm">
+                <div className="relative bg-white rounded-xl p-4 md:p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">Our Commitment</h3>
+                  <p className="text-gray-700 leading-snug text-sm">
                     Sustainability isn't just a feature of Sprin7—it's our foundation. We're dedicated to proving that speed, safety, and convenience can go hand-in-hand with environmental responsibility and economy growth.
                   </p>
                 </div>
@@ -143,12 +143,12 @@ export default function Home() {
                   initial: { opacity: 0, y: 20 },
                   animate: { opacity: 1, y: 0, transition: { delay: 0.3 } }
                 }}
-                className="group relative h-[300px]"
+                className="group relative md:h-[300px]"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                <div className="relative bg-white rounded-xl p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
-                  <h3 className="text-xl font-bold mb-3 text-deep-teal">Our Impact</h3>
-                  <p className="text-gray-700 leading-relaxed text-sm">
+                <div className="relative bg-white rounded-xl p-4 md:p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">Our Impact</h3>
+                  <p className="text-gray-700 leading-snug text-sm">
                     Real-time metrics on avoided carbon emissions reporting.
                   </p>
                 </div>
@@ -160,7 +160,7 @@ export default function Home() {
                   initial: { opacity: 0, y: 20 },
                   animate: { opacity: 1, y: 0, transition: { delay: 0.4 } }
                 }}
-                className="relative rounded-xl overflow-hidden shadow-lg h-[300px]"
+                className="relative rounded-xl overflow-hidden shadow-lg h-[280px] md:h-[300px]"
               >
                 <Image
                   // src="/4.jpg"
@@ -178,12 +178,12 @@ export default function Home() {
                   initial: { opacity: 0, y: 20 },
                   animate: { opacity: 1, y: 0, transition: { delay: 0.5 } }
                 }}
-                className="group relative h-[300px]"
+                className="group relative md:h-[300px]"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                <div className="relative bg-white rounded-xl p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
-                  <h3 className="text-xl font-bold mb-3 text-deep-teal">Initiatives</h3>
-                  <ul className="space-y-1.5 text-gray-700 text-sm">
+                <div className="relative bg-white rounded-xl p-4 md:p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">Initiatives</h3>
+                  <ul className="space-y-1 md:space-y-1.5 text-gray-700 text-sm">
                     <li className="flex items-start">
                       <span className="text-electric-lime mr-2">•</span>
                       Zero-emission transport prioritisation
@@ -214,22 +214,22 @@ export default function Home() {
                   initial: { opacity: 0, y: 20 },
                   animate: { opacity: 1, y: 0, transition: { delay: 0.6 } }
                 }}
-                className="group relative h-[300px]"
+                className="group relative md:h-[300px]"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                <div className="relative bg-white rounded-xl p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
-                  <h3 className="text-xl font-bold mb-3 text-deep-teal">Goals for 2027</h3>
-                  <div className="space-y-3">
+                <div className="relative bg-white rounded-xl p-4 md:p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">Goals for 2027</h3>
+                  <div className="space-y-2 md:space-y-3">
                     <div>
-                      <div className="text-3xl font-bold text-electric-lime mb-1">75%</div>
+                      <div className="text-2xl md:text-3xl font-bold text-electric-lime mb-1">75%</div>
                       <p className="text-gray-700 text-sm">Zero-emission deliveries</p>
                     </div>
                     <div>
-                      <div className="text-3xl font-bold text-electric-lime mb-1">5</div>
+                      <div className="text-2xl md:text-3xl font-bold text-electric-lime mb-1">5</div>
                       <p className="text-gray-700 text-sm">Major UK cities with Sprin7 operations</p>
                     </div>
                     <div>
-                      <div className="text-3xl font-bold text-electric-lime mb-1">30%</div>
+                      <div className="text-2xl md:text-3xl font-bold text-electric-lime mb-1">30%</div>
                       <p className="text-gray-700 text-sm">Reduction in urban delivery carbon footprint</p>
                     </div>
                   </div>

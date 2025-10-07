@@ -123,7 +123,7 @@ export default function LearningHub() {
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6"
+            className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6"
           >
             {learningTopics.map((topic, index) => (
               <motion.div
@@ -132,12 +132,12 @@ export default function LearningHub() {
                   initial: { opacity: 0, y: 20 },
                   animate: { opacity: 1, y: 0, transition: { delay: index * 0.1 } }
                 }}
-                className="group relative h-[280px]"
+                className="group relative md:h-[280px]"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                <div className="relative bg-white rounded-xl p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
-                  <h3 className="text-xl font-bold mb-3 text-deep-teal">{topic.title}</h3>
-                  <p className="text-gray-700 leading-relaxed text-sm">{topic.description}</p>
+                <div className="relative bg-white rounded-xl p-4 md:p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">{topic.title}</h3>
+                  <p className="text-gray-700 leading-snug text-sm text-justify">{topic.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -232,12 +232,12 @@ export default function LearningHub() {
           </motion.h2>
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h3 className="text-3xl font-bold text-deep-teal">Start Small, Think Big</h3>
-            <p className="text-xl text-gray-700 leading-relaxed">
+            <p className="text-xl text-gray-700 leading-relaxed text-justify">
               Small, consistent actions create momentum—choose low-emission travel, plan meals to cut waste,
               and support transparent brands. If you’re a creator, apply the same mindset to your work:
               disclose clearly, partner with values-aligned brands, and measure real outcomes.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed text-justify">
               Sprin7 helps you track progress and celebrate wins—whether that’s fewer car miles, less landfill,
               or a campaign that moved people to choose greener. Learn, test, iterate, repeat.
             </p>
@@ -255,7 +255,7 @@ export default function LearningHub() {
             className="max-w-2xl mx-auto space-y-6"
           >
             <h2 className="text-4xl font-bold text-deep-teal">Ready to Start Your Journey?</h2>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-700 text-justify">
               Join our community and access workshops, tools, and guides—for greener living and ethical,
               results-driven creator marketing.
             </p>

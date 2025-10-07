@@ -140,7 +140,7 @@ export default function BecomeSprin7er() {
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
                 <div className="relative bg-white rounded-xl p-8 shadow-md border-2 border-deep-teal/10 h-full">
                   <h3 className="text-2xl font-bold mb-3 text-deep-teal">{card.title}</h3>
-                  <p className="text-gray-700 mb-4">{card.blurb}</p>
+                  <p className="text-gray-700 mb-4 text-justify">{card.blurb}</p>
                   <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700">
                     {card.points.map((p, idx) => <li key={idx}>{p}</li>)}
                   </ul>

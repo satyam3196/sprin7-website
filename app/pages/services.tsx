@@ -201,7 +201,7 @@ export default function Services() {
               <div className="relative bg-white rounded-xl p-6 h-full shadow-md flex flex-col items-center justify-center text-center border-2 border-deep-teal/10 min-h-[220px]">
                 <method.icon className="w-8 h-8 md:w-12 md:h-12 text-deep-teal mb-3" />
                 <h3 className="text-lg font-bold mb-2 text-deep-teal">{method.title}</h3>
-                <p className="text-sm text-gray-700">{method.description}</p>
+                <p className="text-sm text-gray-700 text-justify">{method.description}</p>
               </div>
             </motion.div>
           ))}
@@ -226,7 +226,7 @@ export default function Services() {
             <div className="grid md:grid-cols-2 gap-10 items-center">
               <div className="space-y-6">
                 <h3 className="text-3xl font-bold text-deep-teal">What We Offer</h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 leading-relaxed text-justify">
                   Sprin7 connects eco-conscious brands with verified creators through our
                   AI-powered matching engine—turning authentic stories into measurable sales.
                   Every campaign fuels local economies and strengthens sustainable choices.
@@ -237,7 +237,7 @@ export default function Services() {
                       <f.icon className="mt-1 shrink-0 w-5 h-5 text-deep-teal" />
                       <div>
                         <p className="font-semibold text-gray-900">{f.title}</p>
-                        <p className="text-gray-700 text-sm">{f.description}</p>
+                        <p className="text-gray-700 text-sm text-justify">{f.description}</p>
                       </div>
                     </li>
                   ))}
@@ -245,7 +245,7 @@ export default function Services() {
               </div>
 
               {/* Marketing Image */}
-              <div className="relative aspect-[4/5] rounded-xl overflow-hidden border-2 border-deep-teal/10 shadow-md h-[500px]">
+              <div className="relative aspect-[4/5] rounded-xl overflow-hidden border-2 border-deep-teal/10 shadow-md h-[400px] md:h-[500px]">
                 <Image
                   src="/4.jpg"
                   alt="Sustainable Marketing on Sprin7"
@@ -269,7 +269,7 @@ export default function Services() {
                     {s.step}
                   </div>
                   <h4 className="text-xl font-semibold text-deep-teal mt-4 mb-2">{s.title}</h4>
-                  <p className="text-gray-700 text-sm leading-relaxed">{s.description}</p>
+                  <p className="text-gray-700 text-sm leading-relaxed text-justify">{s.description}</p>
                 </div>
               ))}
             </div>
@@ -291,7 +291,7 @@ export default function Services() {
 
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h3 className="text-3xl font-bold text-deep-teal">How It Works</h3>
-            <p className="text-xl text-gray-700 leading-relaxed">
+            <p className="text-xl text-gray-700 leading-relaxed text-justify">
               Browse products from our curated selection of sustainable retailers directly in the Sprin7 app.
               Purchase with ease, and a Sprin7er will collect and deliver your items using our eco-friendly
               transport options. Real-time tracking and carbon-impact insights come as standard.

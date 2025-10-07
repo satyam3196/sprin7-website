@@ -108,7 +108,7 @@ export default function EventsPrograms() {
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6"
+            className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6"
           >
             {programs.map((program, index) => (
               <motion.div
@@ -117,12 +117,12 @@ export default function EventsPrograms() {
                   initial: { opacity: 0, y: 20 },
                   animate: { opacity: 1, y: 0, transition: { delay: index * 0.1 } }
                 }}
-                className="group relative h-[300px]"
+                className="group relative md:h-[300px]"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                <div className="relative bg-white rounded-xl p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
-                  <h3 className="text-xl font-bold mb-3 text-deep-teal">{program.title}</h3>
-                  <p className="text-gray-700 leading-relaxed text-sm">{program.description}</p>
+                <div className="relative bg-white rounded-xl p-4 md:p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">{program.title}</h3>
+                  <p className="text-gray-700 leading-snug text-sm text-justify">{program.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -217,13 +217,13 @@ export default function EventsPrograms() {
           </motion.h2>
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h3 className="text-3xl font-bold text-deep-teal">Empowering Students for a Greener Future</h3>
-            <p className="text-xl text-gray-700 leading-relaxed">
+            <p className="text-xl text-gray-700 leading-relaxed text-justify">
               We collaborate with universities, student unions, and societies to run creator-led campaigns,
               on-campus delivery pilots, and research projects that demonstrate measurable carbon savings
               and community benefit. Students gain portfolio-ready experience, while local businesses and
               departments see real outcomes—reduced emissions, higher engagement, and transparent reporting.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-gray-700 leading-relaxed text-justify">
               Programs include brief writing and disclosure training, safety & verification, content quality
               reviews, and performance dashboards (clicks, conversions, and impact metrics). Our goal is simple:
               make sustainable choices the easy choices—on campus and beyond—through practical projects that
