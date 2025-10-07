@@ -84,7 +84,7 @@ export default function BecomeSprin7er() {
     <main className="min-h-screen bg-white font-inter">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white">
-        <div className="container mx-auto px-4 py-32 relative">
+        <div className="container mx-auto px-4 py-12 md:py-16 relative">
           <motion.div
             initial="initial"
             animate="animate"

@@ -13,8 +13,12 @@ const Footer = () => {
               <FaCopyright className="text-lg" />
               <span className="flex items-center space-x-1">
                 <span>Newmint Technologies Ltd 2025</span>
-                <FaRegistered className="text-lg opacity-90" />
               </span>
+            </div>
+            <div className="flex items-center mb-2 space-x-1">
+              <span className="text-sm text-white/90">Sprin7</span>
+              <FaRegistered className="text-sm opacity-90" />
+              <span className="text-sm text-white/90">is a registered trademark</span>
             </div>
             <p className="text-sm text-white/90">
               Registered in England and Wales<br />

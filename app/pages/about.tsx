@@ -43,7 +43,7 @@ export default function About() {
     <main className="min-h-screen bg-white font-inter">
       {/* Hero / Our Story */}
       <section className="relative overflow-hidden bg-white">
-        <div className="container mx-auto px-4 py-32 relative">
+        <div className="container mx-auto px-4 py-12 md:py-16 relative">
           <motion.div
             initial="initial"
             animate="animate"

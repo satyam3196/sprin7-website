@@ -7,6 +7,7 @@ import GoogleAnalytics from './components/GoogleAnalytics'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || 'https://sprin7.com'),
   title: 'AI-Powered Swift, Safe, and Sustainable Services',
   description: 'Connecting people in getting swift, safe, sustainable services to have an easy sustainable lifestyle and boost the economy.',
   keywords: 'sprin7, sustainable delivery, eco-friendly delivery, carbon neutral delivery, green logistics, sustainable marketplace, AI delivery service, zero emission delivery',

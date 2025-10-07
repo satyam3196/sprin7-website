@@ -131,7 +131,7 @@ export default function Services() {
   return (
     <main className="min-h-screen bg-white font-inter">
       {/* Delivery Options */}
-      <section className="py-20 relative bg-white">
+      <section className="py-12 md:py-16 relative bg-white">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -245,13 +245,13 @@ export default function Services() {
               </div>
 
               {/* Marketing Image */}
-              <div className="relative aspect-video rounded-xl overflow-hidden border-2 border-deep-teal/10 shadow-md">
+              <div className="relative aspect-[4/5] rounded-xl overflow-hidden border-2 border-deep-teal/10 shadow-md h-[500px]">
                 <Image
                   src="/4.jpg"
                   alt="Sustainable Marketing on Sprin7"
                   fill
                   className="object-cover"
-                  sizes="(min-width: 768px) 40vw, 90vw"
+                  sizes="(min-width: 768px) 50vw, 90vw"
                 />
               </div>
             </div>

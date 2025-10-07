@@ -31,14 +31,14 @@ export default function Home() {
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-white">
-          <div className="container mx-auto px-4 py-32 relative">
+          <div className="container mx-auto px-4 py-8 md:py-12 relative">
             <motion.div 
               initial="initial"
               animate="animate"
               variants={staggerContainer}
               className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto"
             >
-              <div className="space-y-8">
+              <div className="space-y-3 md:space-y-4">
                 <motion.h1 
                   variants={fadeInUp}
                   className="text-5xl md:text-7xl font-bold leading-tight text-deep-teal"
@@ -61,18 +61,18 @@ export default function Home() {
               
               {/* Hero Image */}
               <motion.div 
-                className="mt-16 w-full"
+                className="mt-4 md:mt-6 w-full"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                <div className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden shadow-2xl aspect-[16/9]">
+                <div className="relative w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl aspect-[17/7]">
                   <Image
-                    src="/1.png"
+                    src="/5.png"
                     alt="Sprin7 Hero - AI-Powered Swift, Safe, and Sustainable Services"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
                     priority
                   />
                 </div>
@@ -463,8 +463,8 @@ const features = [
     )
   },
   {
-    title: "IRL Sprin7ers",
-    description: "Say No More to Catfish Couriers! Enough of receiving deliveries from different faces",
+    title: "Verified Sprin7ers Network",
+    description: "Each Sprin7er is verified before every pickup, promoting transparency and eco-conscious service.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
