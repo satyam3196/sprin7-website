@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
-        <div className="flex justify-between items-center h-16 px-8">
+        <div className="flex justify-between items-center h-16 md:px-4 lg:px-6 xl:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center relative h-12">
           <Image
@@ -45,47 +45,48 @@ const Navbar = () => {
             alt="Sprin7 Logo"
             width={120}
             height={48}
-            className="object-contain h-12 w-auto"
+            className="object-contain h-12 w-auto md:h-10 lg:h-12"
             priority
           />
         </Link>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex items-center space-x-8 relative">
-          <Link href="/" className="text-gray-700 hover:text-deep-teal transition duration-150">
+        <div className="hidden md:flex items-center md:space-x-3 lg:space-x-6 xl:space-x-8 relative">
+          <Link href="/" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
             Home
           </Link>
-          <Link href="/about" className="text-gray-700 hover:text-deep-teal transition duration-150">
+          <Link href="/about" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
             About
           </Link>
-          <Link href="/services" className="text-gray-700 hover:text-deep-teal transition duration-150">
+          <Link href="/services" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
             Services
           </Link>
-          <Link href="/events-programs" className="text-gray-700 hover:text-deep-teal transition duration-150">
+          <Link href="/events-programs" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
             Events & Programs
           </Link>
-          <Link href="/learning-hub" className="text-gray-700 hover:text-deep-teal transition duration-150">
+          <Link href="/learning-hub" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
             Learning Hub
           </Link>
-          <Link href="/become-sprin7er" className="text-gray-700 hover:text-deep-teal transition duration-150">
+          <Link href="/become-sprin7er" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
             Build Income
           </Link>
-          <Link href="/contact" className="text-gray-700 hover:text-deep-teal transition duration-150">
+          <Link href="/contact" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
             Contact Support
           </Link>
         </div>
 
         {/* Right side: Try our app button and language selector */}
-        <div className="hidden md:flex items-center space-x-4 relative">
+        <div className="hidden md:flex items-center md:space-x-2 lg:space-x-4 relative">
           {/* Try our app button */}
           <button
             onClick={() => setIsModalOpen(true)}
-            className="flex items-center gap-2 px-6 py-2 bg-deep-teal text-white rounded-full font-medium hover:bg-deep-teal/90 transition"
+            className="flex items-center gap-1 md:gap-2 md:px-3 md:py-1.5 lg:px-5 xl:px-6 lg:py-2 bg-deep-teal text-white rounded-full font-medium hover:bg-deep-teal/90 transition md:text-sm lg:text-base whitespace-nowrap"
           >
-            Try our app
+            <span className="hidden md:inline lg:hidden">Try app</span>
+            <span className="hidden lg:inline">Try our app</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="h-4 w-4 lg:h-5 lg:w-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
