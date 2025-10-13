@@ -55,7 +55,7 @@ export default function Home() {
                   variants={fadeInUp}
                   className="text-lg text-gray-700 max-w-3xl"
                 >
-                  Connecting people in getting swift, safe, sustainable services to have an easy sustainable lifestyle and boost the economy. 
+                  Connecting people in getting swift, safe, sustainable services to have an easy sustainable lifestyle and boost circular economy. 
                 </motion.p>
               </div>
               
