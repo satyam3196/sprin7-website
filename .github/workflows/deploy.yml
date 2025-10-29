@@ -32,8 +32,7 @@ jobs:
         run: |
           npm run build
           touch out/.nojekyll
-        env:
-          NEXT_PUBLIC_BASE_PATH: /sprin7-website
+          cp CNAME out/CNAME
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
