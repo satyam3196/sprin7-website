@@ -41,7 +41,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link href="/" className="flex items-center relative h-12">
           <Image
-            src="/Sprin7_logo.jpg"
+            src="/Sprin7_logo_transparent.PNG"
             alt="Sprin7 Logo"
             width={120}
             height={48}
@@ -60,6 +60,9 @@ const Navbar = () => {
           </Link>
           <Link href="/services" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
             Services
+          </Link>
+          <Link href="/product" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
+            Product
           </Link>
           <Link href="/events-programs" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
             Events & Programs
@@ -173,6 +176,9 @@ const Navbar = () => {
           </Link>
           <Link href="/services" onClick={closeMenu} className="block px-3 py-2 text-gray-700 hover:text-deep-teal transition duration-150">
             Services
+          </Link>
+          <Link href="/product" onClick={closeMenu} className="block px-3 py-2 text-gray-700 hover:text-deep-teal transition duration-150">
+            Product
           </Link>
           <Link href="/events-programs" onClick={closeMenu} className="block px-3 py-2 text-gray-700 hover:text-deep-teal transition duration-150">
             Events & Programs
