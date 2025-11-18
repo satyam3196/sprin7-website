@@ -1,8 +1,9 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -79,7 +80,57 @@ const creatorSteps = [
   "Launch, track results, and get paid"
 ];
 
+// Sprin7er Journey Images
+const sprin7erJourneySlides = [
+  {
+    images: ['/application/17.png', '/application/18.png'],
+    caption: 'Sprin7er onboarding with compliance checks and eco-mode selection.',
+  },
+  {
+    images: ['/application/19.png', '/application/20.png'],
+    caption: '3-step facial recognition ensures secure access and platform integrity.',
+  },
+  {
+    images: ['/application/21.png', '/application/22.png'],
+    caption: 'Sprin7er dashboard displays weekly performance metrics and user profile details. The "S" tag denotes a student Sprin7er, with the working hours tracker ensuring compliance with the UK\'s 20-hour work limit for students. The profile section allows users to view personal information, while sensitive fields (e.g., date of birth, right-to-work code) can only be updated via support for data security.',
+  },
+  {
+    images: ['/application/23.png', '/application/24.png'],
+    caption: 'Sprin7ers can instantly generate secure QR codes to link deliveries with users. This feature integrates with the user-side "Scan Sprin7er QR" functionality, enabling direct courier assignment and verified identity matching. The earnings dashboard allows drivers to track income, withdraw instantly, or reinvest before the payment cycle — promoting financial flexibility and trust.',
+  },
+  {
+    images: ['/application/25.png', '/application/26.png'],
+    caption: 'Sprin7er dashboard lets drivers toggle between offline and online modes, displaying live eco-delivery opportunities, earnings, and CO₂ savings in real time.',
+  },
+  {
+    images: ['/application/27.png', '/application/28.png'],
+    caption: 'Before accepting a delivery, Sprin7ers complete secure face verification to confirm identity. Once verified, they can begin the job and track progress in real time.',
+  },
+  {
+    images: ['/application/29.png', '/application/30.png'],
+    caption: 'Sprin7ers track their active delivery from pickup to drop-off, with live status updates and instant payment confirmation upon completion — ensuring transparency, safety, and fair earnings.',
+  },
+  {
+    images: ['/application/31.png', '/application/32.png'],
+    caption: 'Built-in safety and support features protect Sprin7ers during live operations.',
+  },
+  {
+    images: ['/application/33.png', '/application/34.png'],
+    caption: 'The integrated Influencer Marketplace allows verified Sprin7ers and users to discover brand campaigns. Through AI-assisted matching, ethical brands can connect with relevant creators based on niche, audience, and platform preferences.',
+  },
+];
+
 export default function BecomeSprin7er() {
+  const [sprin7erSlideIndex, setSprin7erSlideIndex] = useState(0);
+
+  const nextSprin7erSlide = () => {
+    setSprin7erSlideIndex((prev) => (prev + 1) % sprin7erJourneySlides.length);
+  };
+
+  const prevSprin7erSlide = () => {
+    setSprin7erSlideIndex((prev) => (prev - 1 + sprin7erJourneySlides.length) % sprin7erJourneySlides.length);
+  };
+
   return (
     <main className="min-h-screen bg-white font-inter">
       {/* Hero Section */}
@@ -329,7 +380,7 @@ export default function BecomeSprin7er() {
             viewport={{ once: true }}
             className="inline-flex flex-wrap items-center justify-center gap-4"
           >
-            <Link
+            {/* <Link
               href="#apply-delivery"
               className="px-10 py-4 bg-deep-teal rounded-full text-lg text-white font-semibold hover:bg-deep-teal/90 transition"
             >
@@ -340,8 +391,105 @@ export default function BecomeSprin7er() {
               className="px-10 py-4 bg-deep-teal rounded-full text-lg text-white font-semibold hover:opacity-90 transition"
             >
               Creator — Coming Soon
-            </Link>
+            </Link> */}
           </motion.div>
+        </div>
+      </section>
+
+      {/* Sprin7er Journey Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold text-center mb-4 text-deep-teal"
+          >
+            Sprin7er Journey
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"
+          >
+            Join our network of eco-conscious couriers and earn sustainably
+          </motion.p>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="relative">
+              {/* Image Container */}
+              <motion.div
+                key={sprin7erSlideIndex}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.5 }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"
+              >
+                {sprin7erJourneySlides[sprin7erSlideIndex].images.map((image, idx) => (
+                  <div
+                    key={idx}
+                    className="relative group overflow-hidden rounded-2xl shadow-2xl bg-white p-4"
+                  >
+                    <div className="aspect-[9/16] relative">
+                      <img
+                        src={image}
+                        alt={`Sprin7er journey step ${sprin7erSlideIndex * 2 + idx + 1}`}
+                        className="w-full h-full object-contain rounded-xl"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+
+              {/* Navigation Buttons */}
+              <div className="flex justify-center items-center gap-4 mb-6">
+                <button
+                  onClick={prevSprin7erSlide}
+                  className="bg-deep-teal text-white p-3 rounded-full hover:bg-signal-blue transition-colors shadow-lg"
+                  aria-label="Previous slide"
+                >
+                  <ChevronLeft size={24} />
+                </button>
+                
+                {/* Slide Indicators */}
+                <div className="flex gap-2">
+                  {sprin7erJourneySlides.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setSprin7erSlideIndex(idx)}
+                      className={`h-2 rounded-full transition-all ${
+                        idx === sprin7erSlideIndex ? 'w-8 bg-deep-teal' : 'w-2 bg-gray-300'
+                      }`}
+                      aria-label={`Go to slide ${idx + 1}`}
+                    />
+                  ))}
+                </div>
+
+                <button
+                  onClick={nextSprin7erSlide}
+                  className="bg-deep-teal text-white p-3 rounded-full hover:bg-signal-blue transition-colors shadow-lg"
+                  aria-label="Next slide"
+                >
+                  <ChevronRight size={24} />
+                </button>
+              </div>
+
+              {/* Caption */}
+              <motion.div
+                key={`caption-${sprin7erSlideIndex}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="bg-white p-6 rounded-xl shadow-lg max-w-4xl mx-auto"
+              >
+                <p className="text-lg text-gray-700 text-center leading-relaxed">
+                  <strong></strong> {sprin7erJourneySlides[sprin7erSlideIndex].caption}
+                </p>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

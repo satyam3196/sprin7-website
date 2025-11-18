@@ -120,7 +120,7 @@ export default function Home() {
                 />
               </motion.div>
 
-              {/* Row 1 - Column 2: Card 1 - Our Commitment */}
+              {/* Row 1 - Column 2: Card 1 - What We Do */}
               <motion.div
                 variants={{
                   initial: { opacity: 0, y: 20 },
@@ -130,14 +130,21 @@ export default function Home() {
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
                 <div className="relative bg-white rounded-xl p-4 md:p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
-                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">Our Commitment</h3>
-                  <p className="text-gray-700 leading-snug text-sm">
-                    Sustainability isn't just a feature of Sprin7—it's our foundation. We're dedicated to proving that speed, safety, and convenience can go hand-in-hand with environmental responsibility and economy growth.
-                  </p>
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">What We Do</h3>
+                  <ul className="space-y-2 text-gray-700 text-sm">
+                    <li className="flex items-start">
+                      <span className="text-electric-lime mr-2">•</span>
+                      <span><strong>Sprin7 Delivery</strong> – eco-friendly, last-mile logistics using identity-verified couriers and real-time carbon-avoidance tracking.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-electric-lime mr-2">•</span>
+                      <span><strong>Sprin7 Sustainable Marketing</strong> – an AI-powered influencer matching engine that connects ethical brands with verified, sustainability-aligned creators.</span>
+                    </li>
+                  </ul>
                 </div>
               </motion.div>
 
-              {/* Row 1 - Column 3: Card 2 - Our Impact */}
+              {/* Row 1 - Column 3: Card 2 - The Problems We Solve */}
               <motion.div
                 variants={{
                   initial: { opacity: 0, y: 20 },
@@ -147,10 +154,29 @@ export default function Home() {
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
                 <div className="relative bg-white rounded-xl p-4 md:p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
-                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">Our Impact</h3>
-                  <p className="text-gray-700 leading-snug text-sm">
-                    Real-time metrics on avoided carbon emissions reporting.
-                  </p>
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">The Problems We Solve</h3>
+                  <ul className="space-y-1 text-gray-700 text-sm">
+                    <li className="flex items-start">
+                      <span className="text-electric-lime mr-2">•</span>
+                      Eliminating courier impersonation with mandatory AI facial verification
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-electric-lime mr-2">•</span>
+                      Displaying real-time CO₂-avoidance emissions for every delivery
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-electric-lime mr-2">•</span>
+                      Enabling circular economy logistics through donation and recyclable-waste pickups
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-electric-lime mr-2">•</span>
+                      Providing affordable visibility for sustainable SMEs and eco-brands
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-electric-lime mr-2">•</span>
+                      Offering easy access to commercial sustainability learning and market trends
+                    </li>
+                  </ul>
                 </div>
               </motion.div>
 
@@ -172,7 +198,7 @@ export default function Home() {
                 />
               </motion.div>
 
-              {/* Row 2 - Column 2: Card 3 - Initiatives */}
+              {/* Row 2 - Column 2: Card 3 - Who needs our service? */}
               <motion.div
                 variants={{
                   initial: { opacity: 0, y: 20 },
@@ -182,27 +208,19 @@ export default function Home() {
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
                 <div className="relative bg-white rounded-xl p-4 md:p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
-                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">Initiatives</h3>
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">Who needs our service?</h3>
                   <ul className="space-y-1 md:space-y-1.5 text-gray-700 text-sm">
                     <li className="flex items-start">
                       <span className="text-electric-lime mr-2">•</span>
-                      Zero-emission transport prioritisation
-                    </li>
-                    {/* <li className="flex items-start">
-                      <span className="text-electric-lime mr-2">•</span>
-                      Sustainable packaging
-                    </li> */}
-                    <li className="flex items-start">
-                      <span className="text-electric-lime mr-2">•</span>
-                      Eco-conscious partnerships
+                      Micro, Small and Medium Enterprises
                     </li>
                     <li className="flex items-start">
                       <span className="text-electric-lime mr-2">•</span>
-                      Green Marketplace
+                      Society in general
                     </li>
                     <li className="flex items-start">
                       <span className="text-electric-lime mr-2">•</span>
-                      Sustainable Marketing for Boosting Sustainable Values
+                      Individuals who need instant sustainability services
                     </li>
                   </ul>
                 </div>
@@ -301,7 +319,7 @@ export default function Home() {
               className="mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-teal">
-                Our Partners
+                In Partnership With
               </h2>
               
               <div className="flex justify-center">

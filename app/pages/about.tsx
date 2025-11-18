@@ -62,12 +62,12 @@ export default function About() {
               className="text-lg text-gray-700 max-w-3xl mx-auto text-justify mb-6"
             >
               Sprin7 was born from a simple idea: cities deserve services that are faster, safer, and
-              more sustainable. Founded in London in 2025, we created a platform that connects users
+              more sustainable. Founded in London, UK in 2025, we created a platform that connects users
               and businesses with eco-conscious couriers—Sprin7ers—who deliver packages swiftly while
               reducing urban pollution.
             </motion.p>
 
-            <motion.p
+            {/* <motion.p
               variants={fadeInUp}
               className="text-lg text-gray-700 max-w-3xl mx-auto text-justify mb-6"
             >
@@ -105,8 +105,8 @@ export default function About() {
               Our mission is to transform last-mile logistics and digital growth through innovation,
               safety, and sustainability—proving that convenience and commerce can uplift people and
               the planet at the same time.
-            </motion.p>
-          </motion.div>
+            </motion.p> */}
+          </motion.div> 
         </div>
       </section>
 

@@ -61,16 +61,13 @@ const Navbar = () => {
           <Link href="/services" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
             Services
           </Link>
-          <Link href="/product" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
-            Product
-          </Link>
           <Link href="/events-programs" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
             Events & Programs
           </Link>
           <Link href="/learning-hub" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
             Learning Hub
           </Link>
-          <Link href="/become-sprin7er" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
+          <Link href="/build-income" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
             Build Income
           </Link>
           <Link href="/contact" className="text-gray-700 hover:text-deep-teal transition duration-150 md:text-sm lg:text-base">
@@ -177,16 +174,13 @@ const Navbar = () => {
           <Link href="/services" onClick={closeMenu} className="block px-3 py-2 text-gray-700 hover:text-deep-teal transition duration-150">
             Services
           </Link>
-          <Link href="/product" onClick={closeMenu} className="block px-3 py-2 text-gray-700 hover:text-deep-teal transition duration-150">
-            Product
-          </Link>
           <Link href="/events-programs" onClick={closeMenu} className="block px-3 py-2 text-gray-700 hover:text-deep-teal transition duration-150">
             Events & Programs
           </Link>
           <Link href="/learning-hub" onClick={closeMenu} className="block px-3 py-2 text-gray-700 hover:text-deep-teal transition duration-150">
             Learning Hub
           </Link>
-          <Link href="/become-sprin7er" onClick={closeMenu} className="block px-3 py-2 text-gray-700 hover:text-deep-teal transition duration-150">
+          <Link href="/build-income" onClick={closeMenu} className="block px-3 py-2 text-gray-700 hover:text-deep-teal transition duration-150">
             Build Income
           </Link>
           <Link href="/contact" onClick={closeMenu} className="block px-3 py-2 text-gray-700 hover:text-deep-teal transition duration-150">
