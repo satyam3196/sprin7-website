@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
             <p className="text-sm text-white/90">
               Registered in England and Wales<br />
-              Phone: +44 7466469098<br />
+              {/* Phone: +44 xxxxxxxxxx<br /> */}
             </p>
           </div>
 

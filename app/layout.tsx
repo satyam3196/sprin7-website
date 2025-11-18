@@ -8,12 +8,12 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_METADATA_BASE || 'https://sprin7.com'),
-  title: 'AI-Powered Swift, Safe, and Sustainable Services',
+  title: "UK's #1 Sustainability Super-App",
   description: 'Connecting people in getting swift, safe, sustainable services to have an easy sustainable lifestyle and boost circular economy.',
   keywords: 'sprin7, sustainable delivery, eco-friendly delivery, carbon neutral delivery, green logistics, sustainable marketplace, AI delivery service, zero emission delivery',
   authors: [{ name: 'Newmint Technologies Ltd' }],
   openGraph: {
-    title: 'AI-Powered Swift, Safe, and Sustainable Services',
+    title: "UK's #1 Sustainability Super-App",
     description: 'Connecting people in getting swift, safe, sustainable services to have an easy sustainable lifestyle and boost circular economy.',
     url: 'https://sprin7.com',
     siteName: 'Sprin7',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI-Powered Swift, Safe, and Sustainable Services',
+    title: "UK's #1 Sustainability Super-App",
     description: 'Connecting people in getting swift, safe, sustainable services to have an easy sustainable lifestyle and boost circular economy.',
     images: ['https://sprin7.com/sprin7_svg.jpg'],
   },

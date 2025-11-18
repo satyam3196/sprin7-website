@@ -224,7 +224,6 @@ export default function PrivacyPolicyPage() {
               <div className="bg-white p-6 rounded-lg border-2 border-deep-teal/20">
                 <p className="font-semibold text-gray-800 mb-2">Newmint Technologies Ltd</p>
                 <p className="text-gray-700">Email: <a href="mailto:team@sprin7.com" className="text-signal-blue underline">team@sprin7.com</a></p>
-                <p className="text-gray-700">Phone: +44 7466469098</p>
                 <p className="text-gray-700 mt-2">Registered in England and Wales</p>
               </div>
             </div>

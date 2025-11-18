@@ -47,13 +47,13 @@ export default function Home() {
                 </motion.h1>
                 <motion.h2 
                   variants={fadeInUp}
-                  className="text-xl md:text-2xl text-gray-800 font-semibold"
+                  className="text-xl md:text-2xl text-gray-800 font-semibold max-w-5xl mx-auto"
                 >
-                  AI-Powered Swift, Safe, and Sustainable Services
+                  UK's #1 Sustainability Super-App helping MSMEs go greener, faster, and smarter
                 </motion.h2>
                 <motion.p 
                   variants={fadeInUp}
-                  className="text-lg text-gray-700 max-w-3xl"
+                  className="text-lg text-gray-700 max-w-5xl mx-auto"
                 >
                   Connecting people in getting swift, safe, sustainable services to have an easy sustainable lifestyle and boost circular economy. 
                 </motion.p>
@@ -69,7 +69,7 @@ export default function Home() {
                 <div className="relative w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl aspect-[17/7]">
                   <Image
                     src="/5.png"
-                    alt="Sprin7 Hero - AI-Powered Swift, Safe, and Sustainable Services"
+                    alt="UK's #1 Sustainability Super-App"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
@@ -188,10 +188,10 @@ export default function Home() {
                       <span className="text-electric-lime mr-2">•</span>
                       Zero-emission transport prioritisation
                     </li>
-                    <li className="flex items-start">
+                    {/* <li className="flex items-start">
                       <span className="text-electric-lime mr-2">•</span>
                       Sustainable packaging
-                    </li>
+                    </li> */}
                     <li className="flex items-start">
                       <span className="text-electric-lime mr-2">•</span>
                       Eco-conscious partnerships
@@ -208,7 +208,7 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              {/* Row 2 - Column 3: Card 4 - Goals for 2027 */}
+              {/* Row 2 - Column 3: Card 4 - Goals for 2030 */}
               <motion.div
                 variants={{
                   initial: { opacity: 0, y: 20 },
@@ -218,20 +218,24 @@ export default function Home() {
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
                 <div className="relative bg-white rounded-xl p-4 md:p-6 h-full shadow-md flex flex-col border-2 border-deep-teal/10">
-                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">Goals for 2027</h3>
-                  <div className="space-y-2 md:space-y-3">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-deep-teal">Our Ambition for 2030</h3>
+                  <div className="space-y-1.5 md:space-y-2">
                     <div>
-                      <div className="text-2xl md:text-3xl font-bold text-electric-lime mb-1">75%</div>
-                      <p className="text-gray-700 text-sm">Zero-emission deliveries</p>
+                      <div className="text-lg md:text-xl font-bold text-electric-lime mb-1">80%</div>
+                      <p className="text-gray-700 text-sm">Zero-emission deliveries across our network</p>
                     </div>
                     <div>
-                      <div className="text-2xl md:text-3xl font-bold text-electric-lime mb-1">5</div>
-                      <p className="text-gray-700 text-sm">Major UK cities with Sprin7 operations</p>
+                      <div className="text-lg md:text-xl font-bold text-electric-lime mb-1">10</div>
+                      <p className="text-gray-700 text-sm">Major UK cities operating with Sprin7 couriers and creators</p>
                     </div>
                     <div>
-                      <div className="text-2xl md:text-3xl font-bold text-electric-lime mb-1">30%</div>
-                      <p className="text-gray-700 text-sm">Reduction in urban delivery carbon footprint</p>
+                      <div className="text-lg md:text-xl font-bold text-electric-lime mb-1">35%</div>
+                      <p className="text-gray-700 text-sm">Reduction in urban delivery carbon footprint for SMEs</p>
                     </div>
+                    {/* <div>
+                      <div className="text-lg md:text-xl font-bold text-electric-lime mb-1">#1</div>
+                      <p className="text-gray-700 text-sm">Sustainability Super-App empowering UK MSMEs to operate greener, faster, and smarter</p>
+                    </div> */}
                   </div>
                 </div>
               </motion.div>
@@ -288,6 +292,117 @@ export default function Home() {
             viewport={{ once: true }}
             className="container mx-auto px-4 text-center relative"
           >
+            {/* Partners Section */}
+            <motion.div 
+              initial={{ opacity: 0, y: -10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-12 text-deep-teal">
+                Our Partners
+              </h2>
+              
+              <div className="flex justify-center">
+                {/* Microsoft for Startups */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Image
+                    src="/Microsoft Badge.png"
+                    alt="Microsoft for Startups"
+                    width={350}
+                    height={140}
+                    className="object-contain"
+                  />
+                </motion.div>
+
+                {/* Placeholder for future partners */}
+                {/* When adding more partners, wrap them in a grid layout */}
+                {/* 
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl">
+                  <Image src="/partner-logo.png" alt="Partner Name" width={220} height={88} className="object-contain" />
+                </div>
+                */}
+              </div>
+            </motion.div>
+          </motion.div>
+        </section>
+
+        {/* SDG Section */}
+        <section className="py-20 relative overflow-hidden bg-gradient-to-br from-deep-teal/5 to-cloud-gray">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-deep-teal">
+                Supporting UN Sustainable Development Goals
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+                Sprin7 directly supports SDG 9, 11, 12, and 13
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              variants={staggerContainer}
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto"
+            >
+              {[
+                { number: '9', name: 'Industry, Innovation and Infrastructure', file: 'sdg9' },
+                { number: '11', name: 'Sustainable Cities and Communities', file: 'sdg11' },
+                { number: '12', name: 'Responsible Consumption and Production', file: 'sdg12' },
+                { number: '13', name: 'Climate Action', file: 'sdg13' }
+              ].map((sdg, index) => (
+                <motion.div
+                  key={sdg.number}
+                  variants={{
+                    initial: { opacity: 0, scale: 0.8 },
+                    animate: { opacity: 1, scale: 1, transition: { delay: index * 0.1 } }
+                  }}
+                  className="group relative"
+                >
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-electric-lime rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+                  <div className="relative bg-white rounded-xl p-4 shadow-md hover:transform hover:scale-[1.05] transition duration-300 border-2 border-deep-teal/10 h-full min-h-[280px] flex flex-col">
+                    <div className="relative w-full aspect-square mb-3">
+                      <Image
+                        src={`/${sdg.file}.png`}
+                        alt={`SDG ${sdg.number}: ${sdg.name}`}
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                      />
+                    </div>
+                    <h3 className="text-sm md:text-base font-semibold text-center text-deep-teal">
+                      SDG {sdg.number}
+                    </h3>
+                    <p className="text-xs text-center text-gray-600 mt-1 flex-grow">
+                      {sdg.name}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Coming Soon Section */}
+        <section className="py-20 relative overflow-hidden bg-white">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="container mx-auto px-4 text-center relative"
+          >
             <h2 className="text-5xl font-bold mb-6 text-deep-teal">
               Coming Soon!
             </h2>
@@ -314,11 +429,11 @@ export default function Home() {
                       className="relative"
                     />
                   </div>
-                  <div className="text-center">
+                  {/* <div className="text-center">
                     <span className="text-gray-700 font-semibold">
                       Available soon on iOS
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
 
@@ -340,11 +455,11 @@ export default function Home() {
                       className="relative"
                     />
                   </div>
-                  <div className="text-center">
+                  {/* <div className="text-center">
                     <span className="text-gray-700 font-semibold">
                       Available soon on Android
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             </div>
@@ -446,7 +561,7 @@ const features = [
   },
   {
     title: "Sustainable Marketing",
-    description: "AI-matched creators for ROI-driven campaigns; brands grow, Sprin7ers earn",
+    description: "AI-matched creators for ROI-driven campaigns; brands grow, build income from green jobs",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -454,8 +569,8 @@ const features = [
     )
   },
   {
-    title: "Carbon Footprint Tracker",
-    description: "Brag about how big environmental impact you have made from your delivery choices!",
+    title: "Carbon Avoidance Intelligence",
+    description: "Brag about how big environmental impact you have made from your delivery choices",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -463,8 +578,8 @@ const features = [
     )
   },
   {
-    title: "Verified Sprin7ers Network",
-    description: "Each Sprin7er is verified before every pickup, promoting transparency and eco-conscious service.",
+    title: "Verified Service Providers",
+    description: "Each provider is verified before starting the requested job, promoting transparency and eco-conscious service",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -473,7 +588,7 @@ const features = [
   },
   {
     title: "Emergency Dial",
-    description: "We care about our users and sprin7ers. Any suspicious activities or not feeling safe, click our emergency dial",
+    description: "We care about users. If you see suspicious activity or feel unsafe, tap the emergency dial",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -485,10 +600,10 @@ const features = [
 const faqs = [
   {
     question: "How does Sprin7 ensure delivery and campaign safety?",
-    answer: "We verify every Sprin7er (couriers and creators), use real-time tracking for deliveries, and provide an in-app Emergency Dial. Campaigns run through brand-safe briefs, content checks, and performance dashboards. All deliveries and eligible campaigns are covered by our policies."
+    answer: "We verify every service provider(courier or creator), use real-time tracking for deliveries, and provide an in-app Emergency Dial. Campaigns run through brand-safe briefs, content checks, and performance dashboards. All deliveries and eligible campaigns are covered by our policies."
   },
   {
-    question: "What are the requirements to become a Sprin7er (courier or creator)?",
+    question: "What are the requirements to become a Service Provider (courier or creator)?",
     answer: "You must be 18+, pass our verification, and complete training. Couriers need right-to-work in the UK and (if applicable) valid licenses/insurance. Creators connect social profiles, pass brand-safety checks, and agree to disclosure guidelines."
   },
   {
