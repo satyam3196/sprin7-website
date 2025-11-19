@@ -99,7 +99,7 @@ const sprin7erJourneySlides = [
     caption: 'Couriers can instantly generate secure QR codes to link deliveries with users. This feature integrates with the user-side "Scan Sprin7er QR" functionality, enabling direct courier assignment and verified identity matching. The earnings dashboard allows drivers to track income, withdraw instantly, or reinvest before the payment cycle — promoting financial flexibility and trust.',
   },
   {
-    images: ['/application/25.png', '/application/26.png'],
+    images: ['/application/25.jpg', '/application/26.png'],
     caption: 'Courier dashboard lets drivers toggle between offline and online modes, displaying live eco-delivery opportunities and earnings in real time.',
   },
   {
@@ -115,7 +115,7 @@ const sprin7erJourneySlides = [
     caption: 'Built-in safety and support features protect Couriers during live operations.',
   },
   {
-    images: ['/application/33.png', '/application/34.png'],
+    images: ['/application/33.jpg', '/application/34.png'],
     caption: 'The integrated Influencer Marketplace allows verified creators and users to discover brand campaigns. Through AI-assisted matching, ethical brands can connect with relevant creators based on niche, audience, and platform preferences.',
   },
 ];

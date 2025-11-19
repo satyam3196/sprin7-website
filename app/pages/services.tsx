@@ -124,7 +124,7 @@ const userJourneySlides = [
     caption: 'App entry point letting users choose between sending a delivery or joining as a Sprin7 courier.',
   },
   {
-    images: ['/application/3.png', '/application/4.png'],
+    images: ['/application/3.jpg', '/application/4.jpg'],
     caption: 'Main dashboard summarising deliveries, CO₂ avoided, and access to the sustainable influencer marketplace.',
   },
   {
@@ -148,7 +148,7 @@ const userJourneySlides = [
     caption: 'Real-time delivery tracking allows users to monitor progress and confirm successful drop-offs with full transparency.',
   },
   {
-    images: ['/application/15.png', '/application/16.png'],
+    images: ['/application/15.jpg', '/application/16.png'],
     caption: 'Integrated Influencer Marketplace powered by Sprin7 AI — helping ethical brands find verified creators by analysing campaign details and brand values.',
   },
 ];
