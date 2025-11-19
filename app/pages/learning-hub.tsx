@@ -25,7 +25,7 @@ const learningTopics = [
       "Learn eco-friendly ways to move—walking, cycling, and EV options—and how route choices can cut emissions without slowing life down."
   },
   {
-    title: "Zero-Waste Living",
+    title: "Zero-Waste Living and Business",
     description:
       "Practical steps to reduce waste at home and work: repair, reuse, refill, compost, and recycle more effectively."
   },
@@ -59,7 +59,7 @@ const resources = [
       "Start your sustainability journey with simple, actionable steps—habits you can build this week."
   },
   {
-    title: "Carbon Footprint Calculator",
+    title: "Carbon Avoidance Calculator",
     type: "Tool",
     description:
       "Estimate the impact of transport, energy, and consumption—and track your reductions over time."

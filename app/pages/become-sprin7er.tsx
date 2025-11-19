@@ -84,7 +84,7 @@ const creatorSteps = [
 const sprin7erJourneySlides = [
   {
     images: ['/application/17.png', '/application/18.png'],
-    caption: 'Sprin7er onboarding with compliance checks and eco-mode selection.',
+    caption: 'Sprin7 couriers onboarding with compliance checks and eco-mode selection.',
   },
   {
     images: ['/application/19.png', '/application/20.png'],
@@ -92,31 +92,31 @@ const sprin7erJourneySlides = [
   },
   {
     images: ['/application/21.png', '/application/22.png'],
-    caption: 'Sprin7er dashboard displays weekly performance metrics and user profile details. The "S" tag denotes a student Sprin7er, with the working hours tracker ensuring compliance with the UK\'s 20-hour work limit for students. The profile section allows users to view personal information, while sensitive fields (e.g., date of birth, right-to-work code) can only be updated via support for data security.',
+    caption: 'Courier dashboard displays weekly performance metrics and user profile details. The "S" tag denotes a student Sprin7 courier, with the working hours tracker ensuring compliance with the UK\'s 20-hour work limit for students. The profile section allows users to view personal information, while sensitive fields (e.g., date of birth, right-to-work code) can only be updated via support for data security.',
   },
   {
     images: ['/application/23.png', '/application/24.png'],
-    caption: 'Sprin7ers can instantly generate secure QR codes to link deliveries with users. This feature integrates with the user-side "Scan Sprin7er QR" functionality, enabling direct courier assignment and verified identity matching. The earnings dashboard allows drivers to track income, withdraw instantly, or reinvest before the payment cycle — promoting financial flexibility and trust.',
+    caption: 'Couriers can instantly generate secure QR codes to link deliveries with users. This feature integrates with the user-side "Scan Sprin7er QR" functionality, enabling direct courier assignment and verified identity matching. The earnings dashboard allows drivers to track income, withdraw instantly, or reinvest before the payment cycle — promoting financial flexibility and trust.',
   },
   {
     images: ['/application/25.png', '/application/26.png'],
-    caption: 'Sprin7er dashboard lets drivers toggle between offline and online modes, displaying live eco-delivery opportunities, earnings, and CO₂ savings in real time.',
+    caption: 'Courier dashboard lets drivers toggle between offline and online modes, displaying live eco-delivery opportunities, earnings, and CO₂ savings in real time.',
   },
   {
     images: ['/application/27.png', '/application/28.png'],
-    caption: 'Before accepting a delivery, Sprin7ers complete secure face verification to confirm identity. Once verified, they can begin the job and track progress in real time.',
+    caption: 'Before accepting a delivery, Couriers complete secure face verification to confirm identity. Once verified, they can begin the job and track progress in real time.',
   },
   {
     images: ['/application/29.png', '/application/30.png'],
-    caption: 'Sprin7ers track their active delivery from pickup to drop-off, with live status updates and instant payment confirmation upon completion — ensuring transparency, safety, and fair earnings.',
+    caption: 'Couriers track their active delivery from pickup to drop-off, with live status updates and instant payment confirmation upon completion — ensuring transparency, safety, and fair earnings.',
   },
   {
     images: ['/application/31.png', '/application/32.png'],
-    caption: 'Built-in safety and support features protect Sprin7ers during live operations.',
+    caption: 'Built-in safety and support features protect Couriers during live operations.',
   },
   {
     images: ['/application/33.png', '/application/34.png'],
-    caption: 'The integrated Influencer Marketplace allows verified Sprin7ers and users to discover brand campaigns. Through AI-assisted matching, ethical brands can connect with relevant creators based on niche, audience, and platform preferences.',
+    caption: 'The integrated Influencer Marketplace allows verified creators and users to discover brand campaigns. Through AI-assisted matching, ethical brands can connect with relevant creators based on niche, audience, and platform preferences.',
   },
 ];
 
@@ -192,7 +192,7 @@ export default function BecomeSprin7er() {
                 <div className="relative bg-white rounded-xl p-8 shadow-md border-2 border-deep-teal/10 h-full">
                   <h3 className="text-2xl font-bold mb-3 text-deep-teal">{card.title}</h3>
                   <p className="text-gray-700 mb-4 text-justify">{card.blurb}</p>
-                  <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700">
+                  <ul className="list-disc pl-5 space-y-1 text-lg text-gray-700">
                     {card.points.map((p, idx) => <li key={idx}>{p}</li>)}
                   </ul>
                 </div>
@@ -224,7 +224,7 @@ export default function BecomeSprin7er() {
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
               <div className="relative bg-white rounded-xl p-6 shadow-md border-2 border-deep-teal/10">
-                <h3 className="text-2xl font-semibold text-deep-teal mb-4">Delivery Sprin7er</h3>
+                <h3 className="text-2xl font-semibold text-deep-teal mb-4">Delivery Couriers</h3>
                 <div className="grid sm:grid-cols-1 gap-3">
                   {courierRequirements.map((req, index) => (
                     <div
@@ -248,7 +248,7 @@ export default function BecomeSprin7er() {
             >
               <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
               <div className="relative bg-white rounded-xl p-6 shadow-md border-2 border-deep-teal/10">
-                <h3 className="text-2xl font-semibold text-deep-teal mb-4">Creator Sprin7er</h3>
+                <h3 className="text-2xl font-semibold text-deep-teal mb-4">Marketing Creator/Influencer</h3>
                 <div className="grid sm:grid-cols-1 gap-3">
                   {creatorRequirements.map((req, index) => (
                     <div
@@ -371,50 +371,17 @@ export default function BecomeSprin7er() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 relative bg-cloud-gray">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="inline-flex flex-wrap items-center justify-center gap-4"
-          >
-            {/* <Link
-              href="#apply-delivery"
-              className="px-10 py-4 bg-deep-teal rounded-full text-lg text-white font-semibold hover:bg-deep-teal/90 transition"
-            >
-              Delivery — Coming Soon
-            </Link>
-            <Link
-              href="#apply-creator"
-              className="px-10 py-4 bg-deep-teal rounded-full text-lg text-white font-semibold hover:opacity-90 transition"
-            >
-              Creator — Coming Soon
-            </Link> */}
-          </motion.div>
-        </div>
-      </section>
-
       {/* Sprin7er Journey Section */}
-      <section className="py-20 bg-white">
+      <section className="pt-12 pb-20 bg-cloud-gray">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-center mb-4 text-deep-teal"
+            className="text-4xl md:text-5xl font-bold text-center mb-12 text-deep-teal"
           >
-            Sprin7er Journey
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"
-          >
-            Join our network of eco-conscious couriers and earn sustainably
-          </motion.p>
+            Join our network to earn sustainably
+          </motion.h2>  
 
           <div className="max-w-6xl mx-auto">
             <div className="relative">

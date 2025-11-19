@@ -26,7 +26,7 @@ const programs = [
   {
     title: "Community Workshops",
     description:
-      "Hands-on sessions covering zero-waste habits, repair & reuse, safe cycling, and sustainable marketing for local SMEs. Participants leave with practical toolkits and a clear plan to reduce impact at home, on campus, and in the community."
+      "Hands-on sessions covering zero-waste habits, repair & reuse, safe cycling, and sustainable marketing for local MSMEs. Participants leave with practical toolkits and a clear plan to reduce impact at home, on campus, and in the community."
   },
   {
     title: "Green Marketing Campaigns",
@@ -46,7 +46,7 @@ const upcomingEvents = [
     title: "Eco-Innovation Summit",
     date: "Coming Soon",
     description:
-      "Half-day forum with universities, SMEs, and creators. Talks on low-emission logistics, measurable green marketing, and funding pathways for student-led projects."
+      "Half-day forum with universities, MSMEs, and creators. Talks on low-emission logistics, measurable green marketing, and funding pathways for student-led projects."
   },
   {
     title: "Zero-Waste Challenge",

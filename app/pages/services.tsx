@@ -33,7 +33,7 @@ const deliveryOptions = [
   {
     title: "'Now' Delivery",
     description:
-      "Need something right now? Our Sprin7ers can collect and deliver packages in an hour or less. Perfect for urgent documents, forgotten items, or last-minute gifts."
+      "Need something right now? Our couriers can collect and deliver packages in immediate time. Perfect for urgent documents, forgotten items, or last-minute gifts."
   },
   {
     title: "Custom Delivery",
@@ -46,19 +46,19 @@ const transportMethods = [
   {
     title: "Walking",
     description:
-      "For short distances in congested areas, our walking Sprin7ers navigate pedestrian routes for the ultimate zero-emission delivery.",
+      "For short distances in congested areas, our walking couriers navigate pedestrian routes for the ultimate zero-emission delivery.",
     icon: FaUser
   },
   {
     title: "Cycling",
     description:
-      "Our cycling Sprin7ers carry small to medium packages quickly through urban areas, bypassing traffic while producing zero emissions.",
+      "Our cycling couriers carry small to medium packages quickly through urban areas, bypassing traffic while producing zero emissions.",
     icon: FaBicycle
   },
   {
     title: "Electric Bikes",
     description:
-      "For slightly larger items or longer distances, electric bikes offer speed and sustainability without exhausting our Sprin7ers.",
+      "For slightly larger items or longer distances, electric bikes offer speed and sustainability without exhausting our couriers.",
     icon: FaBolt
   },
   {
@@ -121,7 +121,7 @@ const marketingSteps = [
 const userJourneySlides = [
   {
     images: ['/application/1.png', '/application/2.png'],
-    caption: 'App entry point letting users choose between sending a delivery or joining as a Sprin7er courier.',
+    caption: 'App entry point letting users choose between sending a delivery or joining as a Sprin7 courier.',
   },
   {
     images: ['/application/3.png', '/application/4.png'],
@@ -129,15 +129,15 @@ const userJourneySlides = [
   },
   {
     images: ['/application/5.png', '/application/6.png'],
-    caption: 'Users begin by entering pickup and drop-off details, uploading item information, and selecting how to assign their delivery — either by automatically requesting a nearby Sprin7er or scanning a Sprin7er\'s QR code for direct assignment.',
+    caption: 'Users begin by entering pickup and drop-off details, uploading item information, and selecting how to assign their delivery — either by automatically requesting a nearby Sprin7 courier  or scanning a Courier\'s QR code for direct assignment.',
   },
   {
     images: ['/application/7.png', '/application/8.png'],
-    caption: 'After requesting a Sprin7er, users select their preferred eco-friendly delivery mode with real-time pricing, estimated delivery time, and visible carbon savings — empowering sustainable delivery choices.',
+    caption: 'After requesting a courier, users select their preferred eco-friendly delivery mode with real-time pricing, estimated delivery time, and visible carbon savings — empowering sustainable delivery choices.',
   },
   {
     images: ['/application/9.png', '/application/10.png'],
-    caption: 'Alternatively, through real-time QR scanning, users can connect instantly with verified Sprin7ers in their vicinity — ensuring transparency, convenience, and secure job assignment.',
+    caption: 'Alternatively, through real-time QR scanning, users can connect instantly with verified Sprin7 couriers in their vicinity — ensuring transparency, convenience, and secure job assignment.',
   },
   {
     images: ['/application/11.png', '/application/12.png'],
@@ -276,8 +276,8 @@ export default function Services() {
                     <li key={i} className="flex items-start gap-3">
                       <f.icon className="mt-1 shrink-0 w-5 h-5 text-deep-teal" />
                       <div>
-                        <p className="font-semibold text-gray-900">{f.title}</p>
-                        <p className="text-gray-700 text-sm text-justify">{f.description}</p>
+                        <p className="font-semibold text-xl text-gray-900">{f.title}</p>
+                        <p className="text-gray-700 text-xl text-justify">{f.description}</p>
                       </div>
                     </li>
                   ))}
@@ -315,7 +315,7 @@ export default function Services() {
             {/* <h3 className="text-3xl font-bold text-deep-teal">How It Works</h3> */}
             <p className="text-xl text-gray-700 leading-relaxed text-justify">
               Browse products from our curated selection of sustainable retailers directly in the Sprin7 app.
-              Purchase with ease, and a Sprin7er will collect and deliver your items using our eco-friendly
+              Purchase with ease, and a courier will collect and deliver your items using our eco-friendly
               transport options. Real-time tracking and carbon-impact insights come as standard.
             </p>
           </div>
@@ -331,16 +331,16 @@ export default function Services() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-center mb-4 text-deep-teal"
           >
-            User Journey
+            Experience seamless and eco-friendly Sprin7 services <br />
           </motion.h2>
-          <motion.p
+           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"
           >
-            Experience seamless, eco-friendly delivery from registration to completion
-          </motion.p>
+            
+          </motion.p> 
 
           <div className="max-w-6xl mx-auto">
             <div className="relative">

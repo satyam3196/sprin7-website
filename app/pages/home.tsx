@@ -240,15 +240,15 @@ export default function Home() {
                   <div className="space-y-1.5 md:space-y-2">
                     <div>
                       <div className="text-lg md:text-xl font-bold text-electric-lime mb-1">80%</div>
-                      <p className="text-gray-700 text-sm">Zero-emission deliveries across our network</p>
+                      <p className="text-gray-700 text-sm">Zero-emission deliveries in the UK</p>
                     </div>
                     <div>
                       <div className="text-lg md:text-xl font-bold text-electric-lime mb-1">10</div>
-                      <p className="text-gray-700 text-sm">Major UK cities operating with Sprin7 couriers and creators</p>
+                      <p className="text-gray-700 text-sm">Major UK cities operating with Sprin7</p>
                     </div>
                     <div>
                       <div className="text-lg md:text-xl font-bold text-electric-lime mb-1">35%</div>
-                      <p className="text-gray-700 text-sm">Reduction in urban delivery carbon footprint for SMEs</p>
+                      <p className="text-gray-700 text-sm">Reduction in carbon footprint for MSMEs</p>
                     </div>
                     {/* <div>
                       <div className="text-lg md:text-xl font-bold text-electric-lime mb-1">#1</div>

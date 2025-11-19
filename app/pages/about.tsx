@@ -19,7 +19,7 @@ const values = [
   {
     title: "Swift",
     description:
-      "Speed meets efficiency. We connect you with the closest available Sprin7er to ensure timely deliveries and seamless influencer–brand campaigns without compromising our values.",
+      "Speed meets efficiency. We connect you with the closest available courier and marketing creator to ensure timely deliveries and seamless influencer–brand campaigns without compromising our values.",
   },
   {
     title: "Safe",
@@ -54,7 +54,7 @@ export default function About() {
               variants={fadeInUp}
               className="text-5xl font-bold text-center mb-16 text-deep-teal"
             >
-              Our Story
+              Our Inspiration
             </motion.h2>
 
             <motion.p
@@ -62,9 +62,8 @@ export default function About() {
               className="text-lg text-gray-700 max-w-3xl mx-auto text-justify mb-6"
             >
               Sprin7 was born from a simple idea: cities deserve services that are faster, safer, and
-              more sustainable. Founded in London, UK in 2025, we created a platform that connects users
-              and businesses with eco-conscious couriers—Sprin7ers—who deliver packages swiftly while
-              reducing urban pollution.
+              more sustainable. Founded in London, United Kingdom (UK) in 2025, we created a platform that connects users
+              and businesses with eco-conscious couriers and marketing creators.
             </motion.p>
 
             {/* <motion.p
