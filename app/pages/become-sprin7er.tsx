@@ -100,7 +100,7 @@ const sprin7erJourneySlides = [
   },
   {
     images: ['/application/25.png', '/application/26.png'],
-    caption: 'Courier dashboard lets drivers toggle between offline and online modes, displaying live eco-delivery opportunities, earnings, and CO₂ savings in real time.',
+    caption: 'Courier dashboard lets drivers toggle between offline and online modes, displaying live eco-delivery opportunities and earnings in real time.',
   },
   {
     images: ['/application/27.png', '/application/28.png'],

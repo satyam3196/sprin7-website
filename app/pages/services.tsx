@@ -125,7 +125,7 @@ const userJourneySlides = [
   },
   {
     images: ['/application/3.png', '/application/4.png'],
-    caption: 'Main dashboard summarising deliveries, CO₂ savings, and access to the sustainable influencer marketplace.',
+    caption: 'Main dashboard summarising deliveries, CO₂ avoided, and access to the sustainable influencer marketplace.',
   },
   {
     images: ['/application/5.png', '/application/6.png'],
@@ -133,7 +133,7 @@ const userJourneySlides = [
   },
   {
     images: ['/application/7.png', '/application/8.png'],
-    caption: 'After requesting a courier, users select their preferred eco-friendly delivery mode with real-time pricing, estimated delivery time, and visible carbon savings — empowering sustainable delivery choices.',
+    caption: 'After requesting a courier, users select their preferred eco-friendly delivery mode with real-time pricing, estimated delivery time, and visible carbon avoided — empowering sustainable delivery choices.',
   },
   {
     images: ['/application/9.png', '/application/10.png'],
