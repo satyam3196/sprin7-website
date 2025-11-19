@@ -19,7 +19,7 @@ const values = [
   {
     title: "Swift",
     description:
-      "Speed meets efficiency. We connect you with the closest available courier and marketing creator to ensure timely deliveries and seamless influencer–brand campaigns without compromising our values.",
+      "Speed meets efficiency. We connect you with the closest available courier and marketing creator/influencer without compromising our values.",
   },
   {
     title: "Safe",
@@ -34,7 +34,7 @@ const values = [
   {
     title: "Shared Prosperity",
     description:
-      "Through AI-driven influencer matching, we empower creators and help ethical businesses grow—sharing success and impact across our community.",
+      "Through our sustainability learning hub and our AI-powered services, we empower creators and help ethical businesses grow—sharing success and impact across our community.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function About() {
               variants={fadeInUp}
               className="text-lg text-gray-700 max-w-3xl mx-auto text-justify mb-6"
             >
-              Sprin7 was born from a simple idea: cities deserve services that are faster, safer, and
+              Sprin7 was born from the founder's idea: cities deserve services that are faster, safer, and
               more sustainable. Founded in London, United Kingdom (UK) in 2025, we created a platform that connects users
               and businesses with eco-conscious couriers and marketing creators.
             </motion.p>
@@ -167,7 +167,7 @@ export default function About() {
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto text-justify">
               We envision a future where urban logistics and digital marketing
-              move hand-in-hand toward a sustainable economy. Starting in London
+              move hand-in-hand towards a sustainable and circular economy. Starting in London
               and expanding across the UK, Sprin7 aims to pioneer a connected
               network of zero-emission deliveries, transparent creator campaigns,
               and empowered local communities—all contributing to the UK's
@@ -220,7 +220,7 @@ export default function About() {
                   </p>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  Yuanita is the sustainability brain behind Sprin7 — part climate strategist, part AI thinker, and fully committed to building a greener future that genuinely works for real people. With 7+ years across startups, government, and policy institutions, she has led ESG projects, voluntary carbon market initiatives, and big-data sustainability research for policymaking. She has also published impactful work in finance, governance, sustainability, and AI. Holding a Master’s in Climate Change Management & Finance from Imperial College London, she brings a rare blend of environmental strategy, technical insight, and community-focused leadership. At Sprin7, Yuanita is on a mission to make sustainability simple, inclusive, and empowering for UK SMEs and everyday changemakers.
+                  Yuanita is the sustainability brain behind Sprin7 — part climate strategist, part AI thinker, and fully committed to building a greener future that genuinely works for real people. With 7+ years across startups, government, and policy institutions, she has led ESG projects, voluntary carbon market initiatives, and big-data sustainability research for policymaking. She has also published impactful work in finance, governance, sustainability, and AI. Holding a Master’s in Climate Change Management & Finance from Imperial College London, she brings a rare blend of environmental strategy, technical insight, and community-focused leadership. At Sprin7, Yuanita is on a mission to make sustainability simple, inclusive, and empowering for UK MSMEs and everyday changemakers.
                 </p>
               </div>
             </motion.div>

@@ -235,10 +235,8 @@ export default function LearningHub() {
             <p className="text-xl text-gray-700 leading-relaxed text-justify">
               Small, consistent actions create momentum—choose low-emission travel, plan meals to cut waste,
               and support transparent brands. If you’re a creator, apply the same mindset to your work:
-              disclose clearly, partner with values-aligned brands, and measure real outcomes.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed text-justify">
-              Sprin7 helps you track progress and celebrate wins—whether that’s fewer car miles, less landfill,
+              disclose clearly, partner with values-aligned brands, and measure real outcomes. <br/>
+            Sprin7 helps you track progress and celebrate wins—whether that’s fewer car miles, less landfill,
               or a campaign that moved people to choose greener. Learn, test, iterate, repeat.
             </p>
           </div>

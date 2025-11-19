@@ -22,6 +22,7 @@ const Footer = () => {
             </div>
             <p className="text-sm text-white/90">
               Registered in England and Wales<br />
+              Email: team@sprin7.com
               {/* Phone: +44 xxxxxxxxxx<br /> */}
             </p>
           </div>

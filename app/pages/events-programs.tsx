@@ -29,9 +29,9 @@ const programs = [
       "Hands-on sessions covering zero-waste habits, repair & reuse, safe cycling, and sustainable marketing for local MSMEs. Participants leave with practical toolkits and a clear plan to reduce impact at home, on campus, and in the community."
   },
   {
-    title: "Green Marketing Campaigns",
+    title: "Green Marketing Bootcamps",
     description:
-      "AI-matched partnerships between verified student creators and ethical businesses. Campaigns are ASA-compliant, track clicks and sales, and spotlight sustainable choices—driving real footfall and revenue for local retailers."
+      "The Green Marketing Bootcamp is a fast, hands-on workshop where you’ll learn how to market sustainably, tell your brand’s eco-story with confidence, and create campaigns that truly make a positive impact. It’s also perfect if you’re a creator looking to become a green creator—helping you build an authentic, sustainability-driven presence that stands out."
   }
 ];
 
@@ -40,13 +40,13 @@ const upcomingEvents = [
     title: "Sustainable Campus Initiative",
     date: "Coming Soon",
     description:
-      "A campus ‘living lab’ pilot combining walking/cycling deliveries with creator content challenges. Includes carbon-saving dashboards for students and departments."
+      "A campus ‘living lab’ pilot combining walking/cycling deliveries with creator content challenges. Includes carbon-avoidance dashboards for students and departments."
   },
   {
     title: "Eco-Innovation Summit",
     date: "Coming Soon",
     description:
-      "Half-day forum with universities, MSMEs, and creators. Talks on low-emission logistics, measurable green marketing, and funding pathways for student-led projects."
+      "Half-day forum with universities, MSMEs, and creators. Talks on low-emission logistics, measurable green marketing, and funding pathways for student-led sustainability projects."
   },
   {
     title: "Zero-Waste Challenge",
@@ -205,7 +205,7 @@ export default function EventsPrograms() {
       </section>
 
       {/* University Marketing Programs Section */}
-      <section className="py-20 relative bg-cloud-gray">
+      {/* <section className="py-20 relative bg-cloud-gray">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -231,7 +231,7 @@ export default function EventsPrograms() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }

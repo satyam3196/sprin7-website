@@ -170,7 +170,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-start">
                       <span className="text-electric-lime mr-2">•</span>
-                      Providing affordable visibility for sustainable SMEs and eco-brands
+                      Providing affordable visibility for sustainable MSMEs and eco-brands
                     </li>
                     <li className="flex items-start">
                       <span className="text-electric-lime mr-2">•</span>
@@ -212,7 +212,7 @@ export default function Home() {
                   <ul className="space-y-1 md:space-y-1.5 text-gray-700 text-sm">
                     <li className="flex items-start">
                       <span className="text-electric-lime mr-2">•</span>
-                      Micro, Small and Medium Enterprises
+                      Micro, Small and Medium Enterprises (MSMEs)
                     </li>
                     <li className="flex items-start">
                       <span className="text-electric-lime mr-2">•</span>
@@ -364,7 +364,7 @@ export default function Home() {
                 Supporting UN Sustainable Development Goals
               </h2>
               <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-                Sprin7 directly supports SDG 9, 11, 12, and 13
+                {/* Sprin7 directly supports SDG 9, 11, 12, and 13 */}
               </p>
             </motion.div>
 
@@ -606,7 +606,7 @@ const features = [
   },
   {
     title: "Emergency Dial",
-    description: "We care about users. If you see suspicious activity or feel unsafe, tap the emergency dial",
+    description: "We care about our users and service providers. If you feel unsafe, tap the emergency dial",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -622,31 +622,31 @@ const faqs = [
   },
   {
     question: "What are the requirements to become a Service Provider (courier or creator)?",
-    answer: "You must be 18+, pass our verification, and complete training. Couriers need right-to-work in the UK and (if applicable) valid licenses/insurance. Creators connect social profiles, pass brand-safety checks, and agree to disclosure guidelines."
+    answer: "You must be 18+, pass our verification, and complete training. Couriers need right-to-work in the UK and (if applicable) valid licenses/insurance. Creators connect their social profiles, pass brand-safety checks, and agree to our guidelines."
   },
   {
     question: "How are delivery prices calculated?",
-    answer: "By distance, delivery method (walking, cycling, or vehicle), package size, and urgency. Pricing is transparent—see the exact cost before confirming."
+    answer: "By distance, delivery method (walking, cycling, or vehicle), package size, and urgency. Pricing is transparent determined by market events"
   },
   {
     question: "How does influencer matching work on Sprin7?",
-    answer: "Share your campaign brief and goals; our AI matches you with verified creators by audience fit, location, and brand values. Approve matches, track clicks/sales in real time, and pay on milestones or results. Creators earn from successful campaigns."
+    answer: "Share your campaign brief and goals; our AI matches you with verified creators by audience fit, location, and brand values. Approve matches, track clicks/sales in real time, and pay the service fee based on your predetermined milestones."
   },
-  {
-    question: "How are campaign fees and creator payouts set?",
-    answer: "Campaign pricing depends on creator reach/engagement, deliverables, format, and performance goals (e.g., CPA/CPS). Payouts are handled securely in-app with clear milestones and reporting."
-  },
+  // {
+  //   question: "How are campaign fees and creator payouts set?",
+  //   answer: "Campaign pricing depends on creator reach/engagement, deliverables, format, and performance goals (e.g., CPA/CPS). Payouts are handled securely in-app with clear milestones and reporting."
+  // },
   {
     question: "What types of items can I send through Sprin7?",
     answer: "Most legal items that are safe for transport: documents, packages, food, and small/medium goods. No dangerous goods, illegal items, or oversize packages."
   },
   {
     question: "How does Sprin7 contribute to sustainability?",
-    answer: "We prioritize walking/cycling and EVs, track carbon savings per delivery, and spotlight eco-friendly merchants. Our marketing network promotes sustainable brands and behaviors."
+    answer: "We prioritize walking/cycling and EVs, track carbon avoidance per delivery, and spotlight eco-friendly merchants. Our marketing network will help the brands to promote their sustainability elements."
   },
   {
     question: "What happens if my package is damaged or lost?",
-    answer: "Deliveries are insured. Report issues in-app and our team will investigate and process your claim, typically within 24–48 hours."
+    answer: "Report issues in-app and our team will investigate and process your claim, typically within 24–48 hours."
   },
   {
     question: "Do creators need to disclose sponsored content?",

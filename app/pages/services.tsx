@@ -141,7 +141,7 @@ const userJourneySlides = [
   },
   {
     images: ['/application/11.png', '/application/12.png'],
-    caption: 'Secure payment and instant delivery posting powered by Stripe.',
+    caption: 'Secure payment and instant delivery posting will be done by a third party payment gateway.',
   },
   {
     images: ['/application/13.png', '/application/14.png'],

@@ -25,9 +25,9 @@ const earnPaths = [
     points: ["Instant jobs", "Keep tips", "Insurance & safety support"]
   },
   {
-    title: "Creator Campaigns",
+    title: "Marketing Campaigns",
     blurb:
-      "Match with brands that fit your audience and values. Earn from fixed deliverables or performance (clicks/sales).",
+      "Match with brands that fit your audiences. Earn from required deliverables or performance (clicks/sales).",
     points: ["AI matching", "ASA-compliant tools", "Transparent analytics"]
   }
 ];
@@ -55,19 +55,19 @@ const benefits = [
   "Flexible hours—work when you want",
   "Competitive earnings with surge & tips",
   "Be part of an eco-conscious community",
-  "Reduced carbon footprint while you earn",
+  "Reduce carbon footprint while you earn",
   "Stay active: walk or cycle jobs",
-  "Insurance & safety features in-app",
+  "Safety features in-app",
   // Creator-leaning
   "Campaign bonuses & rewards",
   "Build your portfolio with ethical brands",
-  "Live analytics to learn & grow"
+  "Sprin7 sustainability learning hub access"
 ];
 
 const deliverySteps = [
   "Complete the online application",
   "Submit right-to-work & ID for verification",
-  "Attend virtual onboarding",
+  // "Attend virtual onboarding",
   "Complete safety & transport training",
   "Start accepting deliveries!"
 ];
@@ -75,7 +75,7 @@ const deliverySteps = [
 const creatorSteps = [
   "Create your creator profile & link socials",
   "Pass verification & brand-safety checks",
-  "Set your deliverables and rates",
+  //"Set your deliverables and rates",
   "Receive AI-matched briefs & apply",
   "Launch, track results, and get paid"
 ];
@@ -96,11 +96,11 @@ const sprin7erJourneySlides = [
   },
   {
     images: ['/application/23.png', '/application/24.png'],
-    caption: 'Couriers can instantly generate secure QR codes to link deliveries with users. This feature integrates with the user-side "Scan Sprin7er QR" functionality, enabling direct courier assignment and verified identity matching. The earnings dashboard allows drivers to track income, withdraw instantly, or reinvest before the payment cycle — promoting financial flexibility and trust.',
+    caption: 'Couriers will have their own secure QR codes, allowing potential users to connect with them instantly during in-person interactions. This feature enables direct courier assignment and verified identity matching. The earnings dashboard allows drivers to track income, withdraw instantly, or reinvest before the payment cycle — promoting financial flexibility and trust.',
   },
   {
     images: ['/application/25.jpg', '/application/26.png'],
-    caption: 'Courier dashboard lets drivers toggle between offline and online modes, displaying live eco-delivery opportunities and earnings in real time.',
+    caption: 'Couriers can turn on and off their availability through their dashboard. The dashboard is also displaying live eco-delivery opportunities and earnings in real time.',
   },
   {
     images: ['/application/27.png', '/application/28.png'],
@@ -152,9 +152,8 @@ export default function BecomeSprin7er() {
               variants={fadeInUp}
               className="text-lg text-gray-700 max-w-3xl mx-auto text-justify"
             >
-              Earn on your terms with Sprin7. Choose Deliveries for flexible local jobs—or become a Creator
-              to collaborate with ethical brands. Either way, you’ll be part of London’s swift, safe, and sustainable
-              movement.
+              Start your green job with Sprin7. Choose Deliveries for flexible local jobs—or become a Creator
+              to collaborate with ethical brands. Either way, you’ll be part of UK’s sustainability accelerator.
             </motion.p>
           </motion.div>
         </div>
