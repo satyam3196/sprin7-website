@@ -214,12 +214,13 @@ export default function About() {
                   <h3 className="text-2xl font-bold text-deep-teal text-center">
                     Yuanita Intan Paramitasari
                   </h3>
-                  <p className="text-lg font-semibold text-signal-blue mt-2">
-                    Co-founder & CEO
+                  <p className="text-lg font-semibold text-signal-blue mt-2 text-center">
+                    Co-founder & CEO <br/>
+                    "Turning sustainability from policy papers into everyday action."
                   </p>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  With over seven years of experience in corporate transition strategies, AI research, ESG compliance, voluntary carbon markets, and sustainable consumption across startups, government, and policy institutions, Yuanita has led ESG research, reporting, educational initiatives, and AI-driven big data sustainability projects for policymaking. She has published research papers and patents in finance, governance, sustainability, and AI. After earning her Master's in Climate Change Management and Finance from Imperial College Business School, she joined the British Standards Institution (BSI) as Lead Standards Development Manager, overseeing voluntary carbon market and sustainability standards. Combining her public-sector experience and passion for education, Yuanita is inspired building a community-led and education in action sustainability venture that promotes sustainable lifestyles and empowers UK SMEs through AI-powered inclusive services and educational initiatives to easily adopt responsible and sustainable practices.
+                  Yuanita is the sustainability brain behind Sprin7 — part climate strategist, part AI thinker, and fully committed to building a greener future that genuinely works for real people. With 7+ years across startups, government, and policy institutions, she has led ESG projects, voluntary carbon market initiatives, and big-data sustainability research for policymaking. She has also published impactful work in finance, governance, sustainability, and AI. Holding a Master’s in Climate Change Management & Finance from Imperial College London, she brings a rare blend of environmental strategy, technical insight, and community-focused leadership. At Sprin7, Yuanita is on a mission to make sustainability simple, inclusive, and empowering for UK SMEs and everyday changemakers.
                 </p>
               </div>
             </motion.div>
@@ -242,12 +243,13 @@ export default function About() {
                   <h3 className="text-2xl font-bold text-deep-teal text-center">
                     Satyam Sharma
                   </h3>
-                  <p className="text-lg font-semibold text-signal-blue mt-2">
-                    Co-founder & CTO
+                  <p className="text-lg font-semibold text-signal-blue mt-2 text-center">
+                    Co-founder & CTO <br />
+                    "Engineering the AI that makes sustainable living effortless."
                   </p>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  With over three years of experience in AI systems engineering, cloud architecture, and full-stack product development across international organizations, research institutions, and startups, Satyam has built and deployed intelligent platforms advancing digital governance, logistics, and sustainability. After earning his M.Sc. in Big Data Science (Distinction) from Queen Mary University of London, he joined the Commonwealth Secretariat as an AI Researcher, leading AI-driven initiatives for data-informed policymaking and digital transformation across 56 member states. His published research on machine learning–driven urban analytics applies predictive models to enhance infrastructure efficiency, resilience, and environmental decision-making. Combining technical expertise with a passion for sustainability, innovation, and inclusion, Satyam is building an AI-powered venture that drives cleaner innovation and empowers UK SMEs and communities to confidently adopt responsible, future-ready, and impactful sustainable business practices.
+                  Satyam is the tech engine behind Sprin7 — an AI systems engineer and full-stack developer with 3+ years of experience building intelligent platforms across global organisations, research labs, and startups. He specialises in cloud architecture, machine learning, and turning complex data into simple, scalable products. He holds an M.Sc. in Big Data Science (Distinction) from Queen Mary University of London and works as an AI Researcher at the Commonwealth Secretariat, leading predictive analytics and digital transformation across 56 countries. At Sprin7, Satyam is building the AI backbone — identity security, sustainability intelligence, and the systems that make sustainable living seamless for UK MSMEs and communities.
                 </p>
               </div>
             </motion.div>
