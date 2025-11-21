@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaCopyright, FaGooglePlay, FaApple, FaRegistered } from 'react-icons/fa';
+import { FaCopyright, FaGooglePlay, FaApple, FaRegistered, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -39,6 +39,15 @@ const Footer = () => {
                 <FaGooglePlay size={24} />
                 <span>Available soon on Google Play</span>
               </div>
+              <a 
+                href="https://www.linkedin.com/company/sprin7" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-white/90 hover:text-electric-lime transition mt-4"
+              >
+                <FaLinkedin size={24} />
+                <span>Follow us on LinkedIn</span>
+              </a>
             </div>
           </div>
         </div>

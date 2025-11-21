@@ -322,7 +322,7 @@ export default function Home() {
                 In Partnership With
               </h2>
               
-              <div className="flex justify-center">
+              <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
                 {/* Microsoft for Startups */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -339,13 +339,21 @@ export default function Home() {
                   />
                 </motion.div>
 
-                {/* Placeholder for future partners */}
-                {/* When adding more partners, wrap them in a grid layout */}
-                {/* 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl">
-                  <Image src="/partner-logo.png" alt="Partner Name" width={220} height={88} className="object-contain" />
-                </div>
-                */}
+                {/* Google for Startups */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
+                  <Image
+                    src="/Google badge.webp"
+                    alt="Google for Startups"
+                    width={350}
+                    height={140}
+                    className="object-contain"
+                  />
+                </motion.div>
               </div>
             </motion.div>
           </motion.div>
