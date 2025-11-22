@@ -322,19 +322,20 @@ export default function Home() {
                 In Partnership With
               </h2>
               
-              <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 max-w-7xl mx-auto items-center">
                 {/* Microsoft for Startups */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
+                  className="flex justify-center"
                 >
                   <Image
                     src="/Microsoft Badge.png"
                     alt="Microsoft for Startups"
-                    width={350}
-                    height={140}
+                    width={300}
+                    height={120}
                     className="object-contain"
                   />
                 </motion.div>
@@ -345,12 +346,47 @@ export default function Home() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 }}
+                  className="flex justify-center"
                 >
                   <Image
                     src="/Google badge.webp"
                     alt="Google for Startups"
-                    width={350}
-                    height={140}
+                    width={300}
+                    height={120}
+                    className="object-contain"
+                  />
+                </motion.div>
+
+                {/* NVIDIA */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="flex justify-center"
+                >
+                  <Image
+                    src="/nvidia.png"
+                    alt="NVIDIA"
+                    width={300}
+                    height={120}
+                    className="object-contain"
+                  />
+                </motion.div>
+
+                {/* MongoDB for Startups */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="flex justify-center"
+                >
+                  <Image
+                    src="/mongodb-for-startups.png"
+                    alt="MongoDB for Startups"
+                    width={300}
+                    height={120}
                     className="object-contain"
                   />
                 </motion.div>
