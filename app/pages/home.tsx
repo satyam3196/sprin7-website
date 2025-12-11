@@ -21,9 +21,64 @@ const staggerContainer = {
 
 export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
+  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
   const handleFaqClick = (index: number) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleDemoSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setFormStatus('submitting');
+
+    try {
+      // Using Web3Forms - free service for static sites
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '3ba1e515-79e8-4d47-80d1-0357980a834d', // Get free key from web3forms.com
+          subject: `Demo Request from ${formData.name}`,
+          from_name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          to_email: 'team@sprin7.com'
+        }),
+      });
+
+      const result = await response.json();
+      
+      if (result.success) {
+        setFormStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+        setTimeout(() => setFormStatus('idle'), 5000);
+      } else {
+        setFormStatus('error');
+        setTimeout(() => setFormStatus('idle'), 5000);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setFormStatus('error');
+      setTimeout(() => setFormStatus('idle'), 5000);
+    }
   };
 
   return (
@@ -390,6 +445,23 @@ export default function Home() {
                     className="object-contain"
                   />
                 </motion.div>
+
+                {/* AWS */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="flex justify-center"
+                >
+                  <Image
+                    src="/aws.png"
+                    alt="AWS"
+                    width={300}
+                    height={120}
+                    className="object-contain"
+                  />
+                </motion.div>
               </div>
             </motion.div>
           </motion.div>
@@ -453,6 +525,118 @@ export default function Home() {
                   </div>
                 </motion.div>
               ))}
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Request for Demo Section */}
+        <section className="py-20 relative overflow-hidden bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto"
+            >
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-bold mb-4 text-deep-teal">
+                  Request a Demo
+                </h2>
+                <p className="text-lg md:text-xl text-gray-700">
+                  Interested in trying Sprin7? Fill out the form below and we'll get in touch with you soon!
+                </p>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="group relative"
+              >
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-deep-teal to-signal-blue rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-500"></div>
+                <div className="relative bg-white rounded-2xl p-8 md:p-12 shadow-lg border-2 border-deep-teal/20">
+                  <form 
+                    onSubmit={handleDemoSubmit}
+                    className="space-y-6"
+                  >
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-semibold text-deep-teal mb-2">
+                          Full Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          required
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          disabled={formStatus === 'submitting'}
+                          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-deep-teal focus:outline-none transition disabled:bg-gray-100 disabled:cursor-not-allowed"
+                          placeholder="John Doe"
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-semibold text-deep-teal mb-2">
+                          Email Address *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          required
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          disabled={formStatus === 'submitting'}
+                          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-deep-teal focus:outline-none transition disabled:bg-gray-100 disabled:cursor-not-allowed"
+                          placeholder="john@example.com"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-semibold text-deep-teal mb-2">
+                        Message *
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows={5}
+                        required
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        disabled={formStatus === 'submitting'}
+                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-deep-teal focus:outline-none transition resize-none disabled:bg-gray-100 disabled:cursor-not-allowed"
+                        placeholder="Tell us more about your needs and which service you're interested in..."
+                      ></textarea>
+                    </div>
+
+                    {formStatus === 'success' && (
+                      <div className="bg-green-50 border-2 border-green-500 text-green-700 px-4 py-3 rounded-lg text-center">
+                        <p className="font-semibold">Thank you! Your demo request has been received.</p>
+                        <p className="text-sm">We'll contact you soon at {formData.email || 'your email'}.</p>
+                      </div>
+                    )}
+
+                    {formStatus === 'error' && (
+                      <div className="bg-red-50 border-2 border-red-500 text-red-700 px-4 py-3 rounded-lg text-center">
+                        <p className="font-semibold">Oops! Something went wrong.</p>
+                        <p className="text-sm">Please try again or email us at team@sprin7.com</p>
+                      </div>
+                    )}
+
+                    <div className="text-center">
+                      <button
+                        type="submit"
+                        disabled={formStatus === 'submitting'}
+                        className="bg-gradient-to-r from-deep-teal to-signal-blue text-white font-semibold px-8 py-4 rounded-lg hover:shadow-xl transform hover:scale-105 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                      >
+                        {formStatus === 'submitting' ? 'Sending...' : 'Request Demo'}
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </section>
